@@ -11,17 +11,17 @@ export const metadata = {
   openGraph: {
     title: "Wedding Biodata || All People Easy and Free Make Biodata.",
     description: "Wedding Biodata Website is userfriendlly and free & easy generated Biodata.",
-    url: "https://biodataweb.vercel.app",
+    url: "https://biodata-new.vercel.app",
     type: "website"
   },
-  canonical: "https://biodataweb.vercel.app",
+  canonical: "https://biodata-new.vercel.app",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://biodataweb.vercel.app" />
+        <link rel="canonical" href="https://biodata-new.vercel.app" />
       </head>
       <body>
         {children}
