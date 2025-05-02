@@ -323,7 +323,7 @@ export default function Home() {
       <div ref={templatesRef} className="bg-[#F6F8FF]" data-aos="fade-up">
         <div className="py-[80px]">
           <div className="text-center mb-3">
-            <h2 className="text-[28px] sm:text-[45px] text-[#051145] font-bold mb-5">
+            <h2 className="text-[26px] sm:text-[45px] text-[#051145] font-bold mb-5">
               Popular Marriage Biodata Designs
             </h2>
             <h5 className="text-[#1b7261] text-[16px] sm:text-[20px] font-semibold text-center mb-[60px]">Select your favourite biodata design to get started</h5>
@@ -401,7 +401,7 @@ export default function Home() {
                                 className="w-[100%] h-[100%] object-fill"
                               />
                             </div>
-                            <div className="absolute bottom-[0%] left-[7%] w-[270px] sm:w-[325px] xl:w-[340px] h-[108px] bg-[#FFFF] shadow-md  flex items-center justify-center">
+                            <div className="absolute bottom-[0%] left-[8%] sm:left-[7%] w-[270px] sm:w-[325px] xl:w-[340px] h-[108px] bg-[#FFFF] shadow-md  flex items-center justify-center">
                               <button
                                 className="rr-btn"
                                 onClick={() => {
@@ -446,7 +446,7 @@ export default function Home() {
         <div className="relative z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
             <h2 className="text-[25px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
-            <h6 className="text-[16px] sm:text-[20px] text-[#1b7261] mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+            <h6 className="text-[16px] sm:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
             <div>
               {
                 reviewSliderLoading ? (
@@ -483,7 +483,7 @@ export default function Home() {
                       reviews.map((item, index) => (
                         <SwiperSlide key={index}>
                           <div>
-                            <div className="bg-[#FFFF] p-6 sm:p-8 shadow-xl h-[260px] sm:h-[330px]">
+                            <div className="bg-[#FFFF] p-6 sm:p-8 shadow-xl h-[280px] sm:h-[330px]">
                               <div className="flex justify-between">
                                 <div className="w-[20%]">
                                   <div className="">

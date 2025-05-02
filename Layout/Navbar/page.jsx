@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/about-us', current: false },
-    { name: 'Contact', href: '/contact-us', current: false },
+    { name: 'About', href: '/', current: false },
+    { name: 'Contact', href: '/', current: false },
 
 ];
 
@@ -86,7 +86,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
             {/* top header section end */}
 
             {/* header section start */}
-            <Disclosure as="nav" className="bg-[#FFFFFF] py-8">
+            <Disclosure as="nav" className="bg-[#FFFFFF] py-4 sm:py-8">
                 {({ open }) => (
                     <>
                         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

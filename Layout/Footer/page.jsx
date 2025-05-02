@@ -30,8 +30,8 @@ const Footer = () => {
                         <h2 className='text-[white] font-medium lg:text-center text-[24px]'>Information</h2>
                         <ul className='flex flex-col items-stretch lg:items-center'>
                             <Link href={"/"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145]'>Home</Link>
-                            <Link href={"/about-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145]'>About Us</Link>
-                            <Link href={"/contact-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145]'>Contact Us</Link>
+                            <Link href={"/"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145]'>About Us</Link>
+                            <Link href={"/"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145]'>Contact Us</Link>
                         </ul>
                     </div>
 
