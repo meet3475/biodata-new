@@ -299,9 +299,7 @@ export default function Home() {
                       <span className="z-10 transition-colors duration-300 group-hover:text-white">
                         {item.number}
                       </span>
-                      {/* Background color change with 500ms delay */}
                       <div className="absolute inset-0 bg-[#1b7261] rounded-full opacity-0 transition-opacity duration-500 delay-500 group-hover:opacity-100"></div>
-                      {/* Circle expansion effect (immediate) */}
                       <div className="absolute w-0 h-0 bg-[#1b7261] rounded-full transition-all duration-500 group-hover:w-[200px] group-hover:h-[200px] group-hover:-top-10 group-hover:-left-10"></div>
                     </div>
                   </div>
@@ -442,7 +440,15 @@ export default function Home() {
       {/* create biodata section end */}
 
       {/* reviews section start */}
-      <div className="bg-frame"  data-aos="fade-up">
+      <div className="relative" data-aos="fade-up">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[930px] h-[950px] z-0">
+    <Image
+      src="/images/Frame.png"
+      alt="Background Frame"
+      fill
+      className="object-contain animate-float-fast"
+    />
+  </div>
         <div className="relative z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
             <h2 className="text-[25px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
