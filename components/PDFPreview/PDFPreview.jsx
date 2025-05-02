@@ -53,7 +53,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
         {/* Header with profile image */}
         <div className="flex items-center mb-6">
           {profileImage && (
-            <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-[#9E2665] mr-4 flex-shrink-0">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-[#1b7261] mr-4 flex-shrink-0">
               <img 
                 src={profileImage} 
                 alt="Profile" 
@@ -63,7 +63,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
           )}
           <div>
             <h1 
-              className="text-xl font-bold text-[#4649C0]"
+              className="text-xl font-bold text-[#051145]"
               style={{ fontFamily: getFontFamily() }}
             >
               {formData.name || translations[currentLanguage].name}
@@ -82,7 +82,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
           sections[section] && (
             <div key={section} className="mb-4">
               <h3 
-                className="text-base font-bold text-[#9E2665] border-b-2 border-[#9E2665] pb-1 mb-2"
+                className="text-base font-bold text-[#1b7261] border-b-2 border-[#1b7261] pb-1 mb-2"
                 style={{ fontFamily: getFontFamily() }}
               >
                 {translations[currentLanguage][`${section}Details`] ||

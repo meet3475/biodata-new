@@ -75,14 +75,14 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 50,
         borderWidth: 3,
-        borderColor: '#9E2665',
+        borderColor: '#1b7261',
         marginRight: 20,
         objectFit: 'fill'
     },
     name: {
         fontSize: 22,
         fontWeight: 'bold',
-        color: '#4649C0'
+        color: '#051145'
     },
     subtitle: {
         fontSize: 14,
@@ -95,9 +95,9 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#9E2665',
+        color: '#1b7261',
         borderBottomWidth: 2,
-        borderBottomColor: '#9E2665',
+        borderBottomColor: '#1b7261',
         marginBottom: 15, // Increased space after section title
         paddingBottom: 5
     },
@@ -686,7 +686,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'error',
                 title: 'Invalid File Type',
                 text: 'Please upload a JPG or PNG image file',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             });
             return;
         }
@@ -697,7 +697,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'error',
                 title: 'File Too Large',
                 text: 'Image must be less than 2MB',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             });
             return;
         }
@@ -713,7 +713,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                             icon: 'error',
                             title: 'Invalid Image Dimensions',
                             text: 'Image must be 1600x1600 pixels or smaller',
-                            confirmButtonColor: '#4649C0'
+                            confirmButtonColor: '#051145'
                         });
                         return;
                     }
@@ -757,8 +757,8 @@ const BiodataForm = ({ scrollToTemplates }) => {
             text: translations[currentLanguage].confirmDeleteFieldText || `Do you want to delete the "${fieldLabels[fieldName]}" field?`,
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#4649C0',
-            cancelButtonColor: '#9E2665',
+            confirmButtonColor: '#051145',
+            cancelButtonColor: '#1b7261',
             confirmButtonText: translations[currentLanguage].yesDelete || 'Yes, delete it!',
             cancelButtonText: translations[currentLanguage].cancel || 'Cancel'
         }).then((result) => {
@@ -800,7 +800,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Field label is required!',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             });
             return;
         }
@@ -815,7 +815,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Field already exists!',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             });
             return;
         }
@@ -886,7 +886,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Section name already exists!',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             });
             return;
         }
@@ -1080,7 +1080,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     icon: 'warning',
                     title: 'Template Required',
                     text: 'Please select a template first!',
-                    confirmButtonColor: '#4649C0'
+                    confirmButtonColor: '#051145'
                 }).then(() => {
                     scrollToTemplates(); // Scroll after alert is closed
                 });
@@ -1103,7 +1103,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 icon: 'warning',
                 title: 'Template Required',
                 text: 'Please select a template first!',
-                confirmButtonColor: '#4649C0'
+                confirmButtonColor: '#051145'
             }).then(() => {
                 scrollToTemplates();
             });
@@ -1136,8 +1136,8 @@ const BiodataForm = ({ scrollToTemplates }) => {
             text: translations[currentLanguage].confirmDeleteSectionText || `Do you want to delete the "${translations[currentLanguage][`${section}Details`] || section}" section?`,
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#4649C0',
-            cancelButtonColor: '#9E2665',
+            confirmButtonColor: '#051145',
+            cancelButtonColor: '#1b7261',
             confirmButtonText: translations[currentLanguage].yesDelete || 'Yes, delete it!',
             cancelButtonText: translations[currentLanguage].cancel || 'Cancel'
         }).then((result) => {
@@ -1163,8 +1163,8 @@ const BiodataForm = ({ scrollToTemplates }) => {
             text: translations[currentLanguage].confirmResetText || 'Do you really want to reset the form?',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#4649C0',
-            cancelButtonColor: '#9E2665',
+            confirmButtonColor: '#051145',
+            cancelButtonColor: '#1b7261',
             confirmButtonText: translations[currentLanguage].yesReset || 'Yes, reset it!',
             cancelButtonText: translations[currentLanguage].cancel || 'Cancel'
         }).then((result) => {
@@ -1297,7 +1297,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     {/* Up Button */}
                     <button
                         type="button"
-                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#9E2665] active:bg-[#9E2665] transition duration-200 group"
+                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
                         onClick={() => moveFieldUp(section, index)}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-play size-4 -rotate-90 fill-current"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -1306,7 +1306,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     {/* Down Button */}
                     <button
                         type="button"
-                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#9E2665] active:bg-[#9E2665] transition duration-200 group"
+                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
                         onClick={() => moveFieldDown(section, index)}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-play size-4 rotate-90 fill-current"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -1316,7 +1316,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 {/* Delete Button */}
                 <button
                     type="button"
-                    className="p-1 ml-2 w-9 h-9 rounded-full border border-[#9E2665] flex items-center justify-center text-black hover:text-white hover:bg-[#9E2665] transition-colors duration-200"
+                    className="p-1 ml-2 w-9 h-9 rounded-full border border-[#1b7261] flex items-center justify-center text-black hover:text-white hover:bg-[#1b7261] transition-colors duration-200"
                     onClick={() => deleteField(section, fieldName)}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trash2 "><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
@@ -1341,14 +1341,14 @@ const BiodataForm = ({ scrollToTemplates }) => {
                                         sectionLabel)}
                         <button
                             type="button"
-                            className="ml-2 text-gray-500 hover:text-[#4649C0]"
+                            className="ml-2 text-gray-500 hover:text-[#051145]"
                         >
                         </button>
                     </h2>
                     <button
                         type="button"
                         onClick={() => removeSection(sectionKey)}
-                        className="ml-2 w-9 h-9 rounded-full border border-[#9E2665] flex items-center justify-center text-black hover:text-white hover:bg-[#9E2665] transition-colors duration-200"
+                        className="ml-2 w-9 h-9 rounded-full border border-[#1b7261] flex items-center justify-center text-black hover:text-white hover:bg-[#1b7261] transition-colors duration-200"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trash2 "><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
                     </button>
@@ -1361,16 +1361,11 @@ const BiodataForm = ({ scrollToTemplates }) => {
                 </div>
 
                 <div className="mt-4">
-                    <button
-                        type="button"
+
+                    <button className="create-btn"
                         onClick={() => addNewField(sectionKey)}
-                        className='py-2 px-4 flex items-center bg-[#9E2665] text-white text-base md:text-[14px] font-medium rounded-md hover:bg-[#4649C0]'
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg>
-                        {/* Add New Field */}
-                        {translations[currentLanguage].addNewField}
+                        <span>{translations[currentLanguage].addNewField}</span>
                     </button>
                 </div>
             </div>
@@ -1378,181 +1373,173 @@ const BiodataForm = ({ scrollToTemplates }) => {
     };
 
     return (
-        <div className="min-h-screen bg-[#B92753] py-8 sm:px-6 lg:px-8">
-            <div>
-                <div className="text-center my-8">
-                    <h2
-                        className={`text-[28px] ${currentLanguage === 'தமிழ்' ? 'sm:text-[40px]' : 'sm:text-[45px]'} text-[#B92753] font-bold mb-3 bg-white rounded-lg lg:shadow-2xl inline py-3 px-2 sm:px-5`}
-                    >
-                        {translations[currentLanguage].createYourBiodata}
-                    </h2>
-                </div>
+        <div className="min-h-screen py-8 sm:px-6 lg:px-8 bg-image">
+            <div className="relative z-10">
+                <div>
+                    <div className="text-center my-8">
+                        <h2
+                            className={`text-[28px] ${currentLanguage === 'தமிழ்' ? 'sm:text-[40px]' : 'sm:text-[45px]'} text-[#FFFF] font-bold mb-3`}
+                        >
+                            {translations[currentLanguage].createYourBiodata}
+                        </h2>
+                    </div>
 
-                <div className='flex justify-center lg:block text-center mb-8 relative'> {/* Added relative here */}
-                    <button
-                        className="relative flex items-center bg-white rounded-lg shadow-2xl py-3 px-5 ml-2 sm:ml-0"
-                        onClick={() => setDropdownOpen(!isDropdownOpen)}
-                    >
-                        <p className='text-[#B92753] hover:text-[#4649C0] font-medium'>Change Biodata Language</p>
-                        <svg className="size-8 text-[#B92753] hover:text-[#4649C0]" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Translate</title><path d="M21.056 12h-2a1 1 0 000 2v2H17.87a2.965 2.965 0 00.185-1 3 3 0 00-5.598-1.5 1 1 0 101.732 1 1 1 0 01.866-.5 1 1 0 010 2 1 1 0 000 2 1 1 0 110 2 1 1 0 01-.866-.5 1 1 0 10-1.732 1 3 3 0 005.598-1.5 2.965 2.965 0 00-.185-1h1.185v3a1 1 0 002 0v-7a1 1 0 100-2zm-11.97-.757a1 1 0 101.94-.486l-1.757-7.03a2.28 2.28 0 00-4.425 0l-1.758 7.03a1 1 0 101.94.486L5.585 9h2.94zM6.086 7l.697-2.787a.292.292 0 01.546 0L8.026 7zm7.97 0h1a1.001 1.001 0 011 1v1a1 1 0 002 0V8a3.003 3.003 0 00-3-3h-1a1 1 0 000 2zm-4 9h-1a1.001 1.001 0 01-1-1v-1a1 1 0 00-2 0v1a3.003 3.003 0 003 3h1a1 1 0 000-2z"></path></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#B92753] hover:text-[#4649C0] lucide lucide-chevron-down relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-                    </button>
+                    <div className='flex justify-center lg:block text-center mb-8 relative'> {/* Added relative here */}
+                        <button
+                            className="relative flex items-center bg-white rounded-lg shadow-2xl py-3 px-5 ml-2 sm:ml-0"
+                            onClick={() => setDropdownOpen(!isDropdownOpen)}
+                        >
+                            <p className='text-[#1b7261] hover:text-[#051145] font-medium'>Change Biodata Language</p>
+                            <svg className="size-8 text-[#1b7261] hover:text-[#051145]" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Translate</title><path d="M21.056 12h-2a1 1 0 000 2v2H17.87a2.965 2.965 0 00.185-1 3 3 0 00-5.598-1.5 1 1 0 101.732 1 1 1 0 01.866-.5 1 1 0 010 2 1 1 0 000 2 1 1 0 110 2 1 1 0 01-.866-.5 1 1 0 10-1.732 1 3 3 0 005.598-1.5 2.965 2.965 0 00-.185-1h1.185v3a1 1 0 002 0v-7a1 1 0 100-2zm-11.97-.757a1 1 0 101.94-.486l-1.757-7.03a2.28 2.28 0 00-4.425 0l-1.758 7.03a1 1 0 101.94.486L5.585 9h2.94zM6.086 7l.697-2.787a.292.292 0 01.546 0L8.026 7zm7.97 0h1a1.001 1.001 0 011 1v1a1 1 0 002 0V8a3.003 3.003 0 00-3-3h-1a1 1 0 000 2zm-4 9h-1a1.001 1.001 0 01-1-1v-1a1 1 0 00-2 0v1a3.003 3.003 0 003 3h1a1 1 0 000-2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1b7261] hover:text-[#051145] lucide lucide-chevron-down relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
 
-                    {/* Language Dropdown */}
-                    {isDropdownOpen && (
-                        <div className="absolute left-[50%] top-[100%] lg:left-[8%] lg:top-[100%]  transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg rounded-md z-[999]">
-                            <ul className="text-[#B92753] font-medium">
-                                {['English', 'हिंदी', 'मराठी', 'বাংলা', 'ગુજરાતી', 'தமிழ்'].map((lang) => (
-                                    <li
-                                        key={lang}
-                                        className="hover:bg-[#B92753] hover:text-white px-4 py-2 cursor-pointer"
-                                        onClick={() => handleLanguageChange(lang)}
-                                    >
-                                        {lang}
-                                    </li>
+                        {/* Language Dropdown */}
+                        {isDropdownOpen && (
+                            <div className="absolute left-[50%] top-[100%] lg:left-[8%] lg:top-[100%]  transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg rounded-md z-[999]">
+                                <ul className="text-[#1b7261] font-medium">
+                                    {['English', 'हिंदी', 'मराठी', 'বাংলা', 'ગુજરાતી', 'தமிழ்'].map((lang) => (
+                                        <li
+                                            key={lang}
+                                            className="hover:bg-[#1b7261] hover:text-white px-4 py-2 cursor-pointer"
+                                            onClick={() => handleLanguageChange(lang)}
+                                        >
+                                            {lang}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className='flex flex-col-reverse items-center lg:items-stretch lg:flex-row justify-between'>
+
+                        <div className="bg-white shadow-md rounded-lg p-6 mb-8 w-[98%] lg:w-[58%] xl:w-[65%]">
+                            <div className="flex justify-between mb-6">
+                                <div className="relative w-28 h-28 sm:w-32 sm:h-32 bg-gray-100 rounded-full overflow-hidden border-2 border-gray-300">
+                                    {profileImage ? (
+                                        <img src={profileImage} alt="Profile" className="w-full h-full object-fill" />
+                                    ) : (
+
+                                        <div className='flex items-center py-10 justify-evenly flex-col'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-camera">
+                                                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+                                                <circle cx="12" cy="13" r="3"></circle>
+                                            </svg>
+
+                                            {/* Label or Error */}
+                                            {errors.profileImage ? (
+                                                <p className="text-red-500 text-[8px] sm:text-[14px] mt-2 text-center">{errors.profileImage}</p>
+                                            ) : (
+                                                <p className={`font-bold ${currentLanguage === 'தமிழ்' ? 'text-[9px] sm:text-[12px]' : 'text-[13px] sm:text-[16px]'} text-center`}>
+                                                    {translations[currentLanguage].uploadImage}
+                                                </p>
+                                            )}
+                                        </div>
+                                    )}
+                                    <input
+                                        type="file"
+                                        id="profileImage"
+                                        accept="image/*"
+                                        className="absolute inset-0 opacity-0 cursor-pointer"
+                                        onChange={handleImageUpload}
+                                    />
+                                </div>
+                            </div>
+
+                            <form onSubmit={handleSubmit}>
+                                {/* Render all visible sections */}
+                                {Object.keys(sections).map(section => (
+                                    sections[section] && renderSection(section)
                                 ))}
-                            </ul>
+
+                                {/* Form Buttons */}
+                                <div className="flex flex-col sm:flex-row justify-between mt-8">
+                                    <button className="create-btn mb-4 sm:mb-0"
+                                        onClick={addNewSection}
+                                    >
+                                        <span> + {translations[currentLanguage].addNewSection}</span>
+                                    </button>
+
+                                    <div className='flex flex-col sm:flex-row justify-between'>
+                                        <button className="create-btn mb-4 sm:mb-0"
+                                            onClick={resetForm}
+                                        >
+                                            <span>{translations[currentLanguage].resetForm}</span>
+                                        </button>
+
+                                        <button className="create-btn ml-0 sm:ml-8"
+                                            onClick={handleDownloadPDF}
+                                        >
+                                            <span>{translations[currentLanguage].generateBiodata}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    )}
-                </div>
 
-                <div className='flex flex-col-reverse items-center lg:items-stretch lg:flex-row justify-between'>
 
-                    <div className="bg-white shadow-md rounded-lg p-6 mb-8 w-[98%] lg:w-[58%] xl:w-[65%]">
-                        <div className="flex justify-between mb-6">
-                            <div className="relative w-28 h-28 sm:w-32 sm:h-32 bg-gray-100 rounded-full overflow-hidden border-2 border-gray-300">
-                                {profileImage ? (
-                                    <img src={profileImage} alt="Profile" className="w-full h-full object-fill" />
+                        <div className='flex justify-center w-full lg:w-[40%] xl:w-[38%] relative'>
+                            <div
+                                className='sticky top-[20px] mb-[30px] w-[90%] md:w-[95%] xl:w-[88%] h-[700px] lg:h-[750px] bg-gray-100 rounded-2xl overflow-hidden border-2 border-gray-300 cursor-pointer'
+                            >
+                                {selectedTemplate ? (
+                                    loading ? (
+                                        <div className="flex justify-center items-center h-full">
+                                            <DataLoader />
+                                        </div>
+                                    ) : (
+                                        <div className="relative w-full h-full">
+                                            <PDFPreview
+                                                formData={formData}
+                                                profileImage={profileImage}
+                                                selectedTemplate={selectedTemplate}
+                                                fieldLabels={fieldLabels}
+                                                fieldOrder={fieldOrder}
+                                                sections={sections}
+                                                translations={translations}
+                                                currentLanguage={currentLanguage}
+                                            />
+                                        </div>
+                                    )
                                 ) : (
-
-                                    <div className='flex items-center py-10 justify-evenly flex-col'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-camera">
-                                            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-                                            <circle cx="12" cy="13" r="3"></circle>
-                                        </svg>
-
-                                        {/* Label or Error */}
-                                        {errors.profileImage ? (
-                                            <p className="text-red-500 text-[8px] sm:text-[14px] mt-2 text-center">{errors.profileImage}</p>
-                                        ) : (
-                                            <p className={`font-bold ${currentLanguage === 'தமிழ்' ? 'text-[9px] sm:text-[12px]' : 'text-[13px] sm:text-[16px]'} text-center`}>
-                                                {translations[currentLanguage].uploadImage}
-                                            </p>
-                                        )}
+                                    <div onClick={scrollToTemplates}>
+                                        <p className={`font-bold text-[30px] flex items-center justify-center text-center h-[700px] lg:h-[750px] py-9 px-3`}>
+                                            {translations[currentLanguage].chooseTemplate}
+                                        </p>
                                     </div>
                                 )}
-                                <input
-                                    type="file"
-                                    id="profileImage"
-                                    accept="image/*"
-                                    className="absolute inset-0 opacity-0 cursor-pointer"
-                                    onChange={handleImageUpload}
-                                />
                             </div>
-                        </div>
-
-                        <form onSubmit={handleSubmit}>
-                            {/* Render all visible sections */}
-                            {Object.keys(sections).map(section => (
-                                sections[section] && renderSection(section)
-                            ))}
-
-                            {/* Form Buttons */}
-                            <div className="block sm:flex justify-between mt-8">
-                                <button
-                                    type="button"
-                                    onClick={addNewSection}
-                                    className='mb-2 sm:mb-0 py-2 px-4 flex items-center bg-[#9E2665] text-white text-base md:text-[14px] font-medium rounded-md hover:bg-[#4649C0]'
-                                >
-                                    {/* + Add New Section */}
-                                    + {translations[currentLanguage].addNewSection}
-                                </button>
-                                <div className='block sm:flex justify-between gap-5'>
-                                    <button
-                                        type="button"
-                                        onClick={resetForm}
-                                        className='mb-2 sm:mb-0 py-2 px-4 flex items-center bg-[#9E2665] text-white text-base md:text-[14px] font-medium rounded-md hover:bg-[#4649C0]'
-                                    >
-                                        {/* Reset Form */}
-                                        {translations[currentLanguage].resetForm}
-                                    </button>
-
-
-                                    <button
-                                        type="button"
-                                        onClick={handleDownloadPDF}
-                                        className='py-2 px-4 flex items-center bg-[#9E2665] text-white text-base md:text-[14px] font-medium rounded-md hover:bg-[#4649C0]'
-                                    >
-
-                                        {translations[currentLanguage].generateBiodata}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-
-                    <div className='flex justify-center w-full lg:w-[40%] xl:w-[38%] relative'>
-                        <div
-                            className='sticky top-[20px] mb-[30px] w-[90%] md:w-[95%] xl:w-[88%] h-[700px] lg:h-[750px] bg-gray-100 rounded-2xl overflow-hidden border-2 border-gray-300 cursor-pointer'
-                        >
-                            {selectedTemplate ? (
-                                loading ? (
-                                    <div className="flex justify-center items-center h-full">
-                                        <DataLoader />
-                                    </div>
-                                ) : (
-                                    <div className="relative w-full h-full">
-                                        <PDFPreview
-                                            formData={formData}
-                                            profileImage={profileImage}
-                                            selectedTemplate={selectedTemplate}
-                                            fieldLabels={fieldLabels}
-                                            fieldOrder={fieldOrder}
-                                            sections={sections}
-                                            translations={translations}
-                                            currentLanguage={currentLanguage}
-                                        />
-                                    </div>
-                                )
-                            ) : (
-                                <div onClick={scrollToTemplates}>
-                                    <p className={`font-bold text-[30px] flex items-center justify-center text-center h-[700px] lg:h-[750px] py-9 px-3`}>
-                                        {translations[currentLanguage].chooseTemplate}
-                                    </p>
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
+
+                {/* Add Field Modal */}
+                <AddFieldModal
+                    show={showAddFieldModal}
+                    onClose={() => setShowAddFieldModal(false)}
+                    onAdd={handleAddField}
+                    newFieldLabel={newFieldLabel}
+                    setNewFieldLabel={setNewFieldLabel}
+                    currentLanguage={currentLanguage}
+                    translations={translations}
+                />
+
+                {/* Add Section Modal */}
+                <AddSectionModal
+                    show={showAddSectionModal}
+                    onClose={() => setShowAddSectionModal(false)}
+                    onAdd={handleAddSection}
+                    newSectionName={newSectionName}
+                    setNewSectionName={setNewSectionName}
+                    sectionFields={sectionFields}
+                    setSectionFields={setSectionFields}
+                    addSectionField={addSectionField}
+                    updateSectionField={updateSectionField}
+                    currentLanguage={currentLanguage}
+                    translations={translations}
+                />
             </div>
-
-            {/* Add Field Modal */}
-            <AddFieldModal
-                show={showAddFieldModal}
-                onClose={() => setShowAddFieldModal(false)}
-                onAdd={handleAddField}
-                newFieldLabel={newFieldLabel}
-                setNewFieldLabel={setNewFieldLabel}
-                currentLanguage={currentLanguage}
-                translations={translations}
-            />
-
-            {/* Add Section Modal */}
-            <AddSectionModal
-                show={showAddSectionModal}
-                onClose={() => setShowAddSectionModal(false)}
-                onAdd={handleAddSection}
-                newSectionName={newSectionName}
-                setNewSectionName={setNewSectionName}
-                sectionFields={sectionFields}
-                setSectionFields={setSectionFields}
-                addSectionField={addSectionField}
-                updateSectionField={updateSectionField}
-                currentLanguage={currentLanguage}
-                translations={translations}
-            />
-
         </div>
     );
 };

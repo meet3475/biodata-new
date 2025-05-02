@@ -87,7 +87,7 @@ const AddSectionModal = ({
                                 </button>
                                 <button
                                     type="submit"
-                                    className="py-2 px-4 bg-[#4649C0] text-white rounded-md hover:bg-[#9E2665]"
+                                    className="py-2 px-4 bg-[#051145] text-white rounded-md hover:bg-[#1b7261]"
                                 >
                                     {translations[currentLanguage]?.addSection || 'Add Section'}
                                 </button>
