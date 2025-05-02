@@ -10,8 +10,11 @@ import 'swiper/css/pagination';
 import BiodataForm from "@/components/BiodataForm/BiodataForm";
 import { useEffect, useRef, useState } from "react";
 import Loarder from "@/components/Loarder/Loarder";
-import { FreeMode, Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import DataLoader from "@/components/Loarder/DataLoader";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const step = [
   {
@@ -115,6 +118,32 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: false // Changed to false to allow repeated animations
+    });
+
+    // Refresh AOS when route changes
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
+  // Add scroll event listener to refresh AOS
+  useEffect(() => {
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
@@ -174,7 +203,7 @@ export default function Home() {
       {/* navbar section end */}
 
       {/* hero section start */}
-      <div className="relative bg-[#F6F8FF] pt-[120px] pb-[120px] overflow-visible">
+      <div className="relative bg-[#F6F8FF] pt-[120px] pb-[120px] overflow-visible" data-aos="fade-up">
         {/* Background Shapes */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
           <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
@@ -253,7 +282,7 @@ export default function Home() {
       {/* hero section end */}
 
       {/* Steps to Create Biodata section start */}
-      <div className="bg-[#FFFFFF]">
+      <div className="bg-[#FFFFFF]" data-aos="fade-up">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
           <div className="text-left mb-3">
             <h6 className="text-[#1b7261]">Our Services</h6>
@@ -291,7 +320,7 @@ export default function Home() {
       {/* Steps to Create Biodata section end */}
 
       {/* templates slider section start */}
-      <div ref={templatesRef} className="bg-[#F6F8FF]">
+      <div ref={templatesRef} className="bg-[#F6F8FF]" data-aos="fade-up">
         <div className="py-[80px]">
           <div className="text-center mb-3">
             <h2 className="text-[28px] sm:text-[45px] text-[#051145] font-bold mb-5">
@@ -407,106 +436,111 @@ export default function Home() {
       {/* templates slider section end */}
 
       {/* create biodata section start */}
-      <div ref={biodataFormRef} id="create-biodata">
+      <div ref={biodataFormRef} id="create-biodata" data-aos="fade-up">
         <BiodataForm scrollToTemplates={scrollToTemplates} />
       </div>
       {/* create biodata section end */}
 
       {/* reviews section start */}
-      <div className="bg-[#FAFBFF]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
-          <h2 className="text-[25px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
-          <h6 className="text-[16px] sm:text-[20px] text-[#1b7261] mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
-          <div>
-            {
-              reviewSliderLoading ? (
-                <DataLoader />
-              ) : (
-                <Swiper
-                  slidesPerView={2}
-                  spaceBetween={30}
-                  navigation={showNavigation}
-                  pagination={{
-                    clickable: true
-                  }}
-                  modules={[Navigation, Pagination]}
-                  className="reviewsSwiper"
-                  breakpoints={{
-                    310: {
-                      slidesPerView: 1
-                    },
-                    540: {
-                      slidesPerView: 1
-                    },
-                    940: {
-                      slidesPerView: 2
-                    },
-                    1024: {
-                      slidesPerView: 2
-                    },
-                    1600: {
-                      slidesPerView: 2
-                    }
-                  }}
-                >
-                  {
-                    reviews.map((item, index) => (
-                      <SwiperSlide key={index}>
-                        <div>
-                          <div className="bg-[#FFFF] p-6 sm:p-8 shadow-xl h-[260px] sm:h-[330px]">
-                            <div className="flex justify-between">
-                              <div className="w-[20%]">
-                                <div className="">
-                                  <Image
-                                    src={item.image}
-                                    alt="profile"
-                                    width={80}
-                                    height={80}
-                                    className="W-[100%] h-[100%] rounded-full object-cover"
-                                  />
+      <div className="bg-frame"  data-aos="fade-up">
+        <div className="relative z-10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
+            <h2 className="text-[25px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
+            <h6 className="text-[16px] sm:text-[20px] text-[#1b7261] mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+            <div>
+              {
+                reviewSliderLoading ? (
+                  <DataLoader />
+                ) : (
+                  <Swiper
+                    slidesPerView={2}
+                    spaceBetween={30}
+                    navigation={showNavigation}
+                    pagination={{
+                      clickable: true
+                    }}
+                    modules={[Navigation, Pagination]}
+                    className="reviewsSwiper"
+                    breakpoints={{
+                      310: {
+                        slidesPerView: 1
+                      },
+                      540: {
+                        slidesPerView: 1
+                      },
+                      940: {
+                        slidesPerView: 2
+                      },
+                      1024: {
+                        slidesPerView: 2
+                      },
+                      1600: {
+                        slidesPerView: 2
+                      }
+                    }}
+                  >
+                    {
+                      reviews.map((item, index) => (
+                        <SwiperSlide key={index}>
+                          <div>
+                            <div className="bg-[#FFFF] p-6 sm:p-8 shadow-xl h-[260px] sm:h-[330px]">
+                              <div className="flex justify-between">
+                                <div className="w-[20%]">
+                                  <div className="">
+                                    <Image
+                                      src={item.image}
+                                      alt="profile"
+                                      width={80}
+                                      height={80}
+                                      className="W-[100%] h-[100%] rounded-full object-cover"
+                                    />
+                                  </div>
                                 </div>
-                              </div>
-                              <div className="w-[75%]">
-                                <div className="flex">
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                </div>
+                                <div className="w-[75%]">
+                                  <div className="flex">
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                                    </svg>
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                                    </svg>
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                                    </svg>
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                                    </svg>
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                                    </svg>
+                                  </div>
 
-                                <div className="mt-2.5 mb-4">
-                                  <p className="text-[#54595f] text-[12px] md:text-[16px]">{item.description}</p>
-                                </div>
+                                  <div className="mt-2.5 mb-4">
+                                    <p className="text-[#54595f] text-[12px] md:text-[16px]">{item.description}</p>
+                                  </div>
 
-                                <div>
-                                  <h3 className="text-[#1b7261] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
+                                  <div>
+                                    <h3 className="text-[#1b7261] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </SwiperSlide>
-                    ))
-                  }
-                </Swiper>
-              )
-            }
+                        </SwiperSlide>
+                      ))
+                    }
+                  </Swiper>
+                )
+              }
+            </div>
           </div>
         </div>
-
       </div>
       {/* reviews section end */}
+
+      {/* ScrollbartoTop start */}
+      <ScrollToTop />
+      {/* ScrollbartoTop end */}
 
       {/* Footer section start */}
       <Footer />

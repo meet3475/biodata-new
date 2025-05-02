@@ -407,6 +407,23 @@
 
 
 /*Reviews section style Start  */
+.bg-frame {
+  position: relative;
+  background-image: url("../public/images/Frame.png");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: center;
+  z-index: 1;
+}
+
+.bg-frame::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 251, 255, 0.5);
+  z-index: 2;
+  pointer-events: none;
+}
 
 .reviewsSwiper {
   padding: 60px 0 !important;
