@@ -259,19 +259,19 @@ export default function Home() {
                 alt="small thumb"
                 width={200}
                 height={200}
-                className="absolute top-[10%] right-[-20%] hidden 2xl:block animate-float-fast"
+                className="absolute top-[10%] right-[-20%] xl:right-[-5%] xl:top-[48%] 2xl:right-[-20%] 2xl:top-[10%] hidden xl:block animate-float-fast"
               />
               <Image
                 src="/images/banner-md.jpg"
                 alt="md thumb"
-                width={215}
-                height={350}
+                width={220}
+                height={235}
                 className="absolute bottom-[-7%] left-[-4%] sm:left-[8%] lg:left-[-4%] hidden md:block rounded-[40%] animate-float-fast"
               />
               <Image
                 src="/images/img-full.png"
                 alt="border full"
-                width={260}
+                width={270}
                 height={400}
                 className="absolute bottom-[-9%] left-[-8%] sm:left-[5%] lg:left-[-8%] opacity-40 hidden md:block animate-float-fast"
               />
@@ -390,7 +390,7 @@ export default function Home() {
                       <SwiperSlide key={index}>
                         <div className="flex justify-center">
                           <div className="relative pb-[60px]"> {/* Add padding to give space below */}
-                            <div className="w-[325px] sm:w-[380px] xl:w-[400px] h-[350px]">
+                            <div className="w-[325px] sm:w-[380px] xl:w-[400px] h-[550px]">
                               <Image
                                 src={item.image}
                                 width={500}
@@ -399,7 +399,7 @@ export default function Home() {
                                 className="w-[100%] h-[100%] object-fill"
                               />
                             </div>
-                            <div className="absolute bottom-[0%] left-[8%] sm:left-[7%] w-[270px] sm:w-[325px] xl:w-[340px] h-[108px] bg-[#FFFF] shadow-md  flex items-center justify-center">
+                            <div className="absolute bottom-[1%] left-[8%] sm:left-[7%] w-[270px] sm:w-[325px] xl:w-[340px] h-[108px] bg-[#FFFF] shadow-md  flex items-center justify-center">
                               <button
                                 className="rr-btn"
                                 onClick={() => {
@@ -441,14 +441,14 @@ export default function Home() {
 
       {/* reviews section start */}
       <div className="relative" data-aos="fade-up">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[930px] h-[950px] z-0">
-    <Image
-      src="/images/Frame.png"
-      alt="Background Frame"
-      fill
-      className="object-contain animate-float-fast"
-    />
-  </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] h-[310px] sm:w-[530px] sm:h-[530px] lg:w-[930px] lg:h-[950px] z-0">
+          <Image
+            src="/images/Frame.png"
+            alt="Background Frame"
+            fill
+            className="object-contain animate-float-fast"
+          />
+        </div>
         <div className="relative z-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
             <h2 className="text-[25px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
@@ -461,6 +461,7 @@ export default function Home() {
                   <Swiper
                     slidesPerView={2}
                     spaceBetween={30}
+                    loop={true}
                     navigation={showNavigation}
                     pagination={{
                       clickable: true

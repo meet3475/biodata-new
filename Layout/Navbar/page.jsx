@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/', current: false },
+    { name: 'About', href: '/about-us', current: false },
     { name: 'Contact', href: '/', current: false },
 
 ];
@@ -47,11 +47,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                             </div>
                         </div>
 
-                        <div>
-                            <p className='text-[14px] text-[#ffff]'>
-                                Free Metro Delivery* Sign Up For $30 Off Your Order!
-                            </p>
-                        </div>
+                       
 
                         <div className='flex'>
                             <div className='text-[#fff] hover:text-[#75AAA0] px-2.5'>
@@ -86,7 +82,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
             {/* top header section end */}
 
             {/* header section start */}
-            <Disclosure as="nav" className="bg-[#FFFFFF] py-4 sm:py-8">
+            <Disclosure as="nav" className="bg-[#FFFFFF] py-4 sm:py-6">
                 {({ open }) => (
                     <>
                         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
