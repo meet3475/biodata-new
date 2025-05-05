@@ -170,7 +170,7 @@ const AboutUs = () => {
                                 >
 
                                     <Image
-                                        src="/images/banner-main.jpg"
+                                        src="/images/aboutus.png"
                                         alt="main"
                                         width={550}
                                         height={600}
@@ -181,12 +181,11 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-
                         <div className='w-full sm:w-[48%] xl:w-[45%]'>
                             <div className='flex flex-col justify-center h-[100%]'>
                                 <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5'>About Us Wedding Biodata</h5>
                                 <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-4'>We Will Make Your Dream Wedding Biodata</h3>
-                                <p className='text-[#54595f] text-[16px] sm:text-[18px]'>
+                                <p className='text-[#54595f] text-[16px] sm:text-[18px] Montserrat-font'>
                                     Welcome to weddingbiodata.com your one-stop solution for crafting the perfect marriage biodata! Finding the right life partner is an exciting journey, and we are here to make it easier for you with our innovative marriage biodata maker.
                                 </p>
                             </div>
@@ -274,7 +273,7 @@ const AboutUs = () => {
 
                                     <div>
                                         <h3 className="text-[#1b7261] font-bold text-[20px]">{item.title}</h3>
-                                        <p className="text-[#54595F] text-[16px]">{item.description}</p>
+                                        <p className="text-[#54595F] text-[16px] Montserrat-font">{item.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -305,7 +304,7 @@ const AboutUs = () => {
                                             </h4>
                                             {
                                                 openIndex === index && (
-                                                    <p className="text-[#1b7261] text-[14px] sm:text-[16px] mt-2">
+                                                    <p className="text-[#1b7261] text-[14px] sm:text-[16px] mt-2 Montserrat-font">
                                                         {item.description}
                                                     </p>
                                                 )
@@ -319,7 +318,9 @@ const AboutUs = () => {
                         <div className='w-full sm:w-[48%] lg:w-[50%]'>
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
-                                    <Image src="/images/banner-main.jpg" alt="Hero Main" width={400} height={500} className="rounded-xl" />
+                                    <div className='w-[500px] h-[600px]'>
+                                        <Image src="/images/banner-md.jpg" alt="banner" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
+                                    </div>
                                 </div>
                                 <Image
                                     src="/images/banner-sm.jpg"
@@ -416,11 +417,11 @@ const AboutUs = () => {
                                                         </div>
 
                                                         <div className="mt-2.5 mb-4 text-center">
-                                                            <p className="text-[#54595f] text-[12px] md:text-[18px]">{item.description}</p>
+                                                            <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
                                                         </div>
 
                                                         <div className="text-center">
-                                                            <h3 className="text-[#1b7261] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
+                                                            <h3 className="text-[#051145] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
                                                         </div>
                                                     </div>
                                                 </div>
