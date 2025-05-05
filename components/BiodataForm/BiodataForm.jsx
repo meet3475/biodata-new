@@ -1286,7 +1286,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
         }
 
         return (
-            <div key={fieldName} className="relative flex items-center mb-3 sm:mb-0">
+            <div key={fieldName} className="relative flex items-center mb-3 sm:mb-2">
                 <div className="flex-grow">
                     <label className="w-full mb-1 sm:mb-0 sm:w-[48%] inline-block px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200  mr-3">{fieldLabels[fieldName]}</label>
                     {inputElement}
@@ -1297,7 +1297,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     {/* Up Button */}
                     <button
                         type="button"
-                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
+                        className="w-7 h-7 flex items-center justify-center rounded-full border border-[#1b7261] bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
                         onClick={() => moveFieldUp(section, index)}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-play size-4 -rotate-90 fill-current"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -1306,7 +1306,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     {/* Down Button */}
                     <button
                         type="button"
-                        className="w-7 h-7 flex items-center justify-center rounded-full bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
+                        className="w-7 h-7 flex items-center justify-center rounded-full border border-[#1b7261] bg-transparent text-black hover:text-white hover:bg-[#1b7261] active:bg-[#1b7261] transition duration-200 group"
                         onClick={() => moveFieldDown(section, index)}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-play size-4 rotate-90 fill-current"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>

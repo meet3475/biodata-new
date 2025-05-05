@@ -404,37 +404,11 @@
 }
 
 /* Create Biodata section style end  */
-
-
 /*Reviews section style Start  */
-.reviewsSwiper {
-  padding: 60px 0!important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: gray !important;
-
-}
-
-.swiper-button-prev:after, .swiper-button-next:after{
-  font-size: 22px !important;
-  font-weight: 800;
-}
-
-.swiper-button-prev{
-  left: 2px !important;
-
-}
-
-.swiper-button-next {
-  right: 2px !important; 
-}
-
 .swiper-pagination-bullet {
-  width: 32px !important;
-  height: 8px !important;
-  border-radius: 20px !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
 }
 
 .swiper-pagination-bullet-active {
