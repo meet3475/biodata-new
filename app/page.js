@@ -217,7 +217,7 @@ export default function Home() {
                 <button className="rr-btn"
                   onClick={scrollToBiodataForm}
                 >
-                  <span>
+                  <span className="Montserrat-font">
                     Create Biodata
                   </span>
                 </button>
@@ -475,7 +475,7 @@ export default function Home() {
                 reviews.map((item, index) => (
                   <SwiperSlide key={index}>
                     <div>
-                      <div className="w-[70%] mx-[15%] h-[240px] text-center ">
+                      <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[240px] text-center ">
                         <div>
                           <div>
                             <div className="flex justify-center items-center ">
