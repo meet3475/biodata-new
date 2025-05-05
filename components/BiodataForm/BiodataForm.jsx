@@ -1243,7 +1243,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         name={fieldName}
                         value={formData[fieldName]}
                         onChange={handleChange}
-                        className={`w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
                     />
                 );
                 break;
@@ -1254,7 +1254,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         name={fieldName}
                         value={formData[fieldName]}
                         onChange={handleChange}
-                        className="w-full sm:w-[48%] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        className="Montserrat-font w-full sm:w-[48%] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
                     />
                 );
                 break;
@@ -1268,7 +1268,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         value={formData[fieldName]}
                         onChange={handleChange}
                         placeholder={`${translations[currentLanguage].enter} ${fieldLabels[fieldName]}`}
-                        className={`w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
                     />
                 );
                 break;
@@ -1280,7 +1280,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         value={formData[fieldName]}
                         onChange={handleChange}
                         placeholder={`${translations[currentLanguage].enter} ${fieldLabels[fieldName]}`}
-                        className={`w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
                     />
                 );
         }
@@ -1288,7 +1288,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
         return (
             <div key={fieldName} className="relative flex items-center mb-3 sm:mb-2">
                 <div className="flex-grow">
-                    <label className="w-full mb-1 sm:mb-0 sm:w-[48%] inline-block px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200  mr-3">{fieldLabels[fieldName]}</label>
+                    <label className="Montserrat-font w-full mb-1 sm:mb-0 sm:w-[48%] inline-block px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200  mr-3">{fieldLabels[fieldName]}</label>
                     {inputElement}
                     {errors[fieldName] && <p className="text-red-500 text-xs mt-1">{errors[fieldName]}</p>}
                 </div>
@@ -1365,7 +1365,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     <button className="create-btn"
                         onClick={() => addNewField(sectionKey)}
                     >
-                        <span>{translations[currentLanguage].addNewField}</span>
+                        <span className='Montserrat-font'>{translations[currentLanguage].addNewField}</span>
                     </button>
                 </div>
             </div>
@@ -1431,7 +1431,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                                             {errors.profileImage ? (
                                                 <p className="text-red-500 text-[8px] sm:text-[14px] mt-2 text-center">{errors.profileImage}</p>
                                             ) : (
-                                                <p className={`font-bold ${currentLanguage === 'தமிழ்' ? 'text-[9px] sm:text-[12px]' : 'text-[13px] sm:text-[16px]'} text-center`}>
+                                                <p className={`Montserrat-font font-bold ${currentLanguage === 'தமிழ்' ? 'text-[9px] sm:text-[12px]' : 'text-[13px] sm:text-[16px]'} text-center`}>
                                                     {translations[currentLanguage].uploadImage}
                                                 </p>
                                             )}
@@ -1458,20 +1458,20 @@ const BiodataForm = ({ scrollToTemplates }) => {
                                     <button className="create-btn mb-4 sm:mb-0"
                                         onClick={addNewSection}
                                     >
-                                        <span> + {translations[currentLanguage].addNewSection}</span>
+                                        <span className='Montserrat-font'>+ {translations[currentLanguage].addNewSection}</span>
                                     </button>
 
                                     <div className='flex flex-col sm:flex-row justify-between'>
                                         <button className="create-btn mb-4 sm:mb-0"
                                             onClick={resetForm}
                                         >
-                                            <span>{translations[currentLanguage].resetForm}</span>
+                                            <span className='Montserrat-font'>{translations[currentLanguage].resetForm}</span>
                                         </button>
 
                                         <button className="create-btn ml-0 sm:ml-8"
                                             onClick={handleDownloadPDF}
                                         >
-                                            <span>{translations[currentLanguage].generateBiodata}</span>
+                                            <span className='Montserrat-font'>{translations[currentLanguage].generateBiodata}</span>
                                         </button>
                                     </div>
                                 </div>

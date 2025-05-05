@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: 'LibreBodoni';
+  src: url('../public/fonts/LibreBodoni-Regular.ttf');
+}
+
+@font-face {
   font-family: 'Montserrat';
   src: url('../public/fonts/Montserrat-Regular.ttf');
 }
 
 * {
-  font-family: 'Montserrat', 'sans-sarif';
+  font-family: 'LibreBodoni', 'sans-sarif';
 }
 
 :root {
@@ -33,6 +38,9 @@
   padding: 0 32px;
 }
 
+.Montserrat-font {
+  font-family: 'Montserrat', 'sans-sarif';
+}
 
 /* style start */
 
@@ -140,6 +148,8 @@
 
 
 /* navbar style start */
+
+
 .rr-btn {
   font-size: 16px;
   padding: 14px 20px;
@@ -404,6 +414,8 @@
 }
 
 /* Create Biodata section style end  */
+
+
 /*Reviews section style Start  */
 .swiper-pagination-bullet {
   width: 15px !important;
@@ -416,3 +428,5 @@
 }
 
 /*Reviews section style end  */
+
+

@@ -208,7 +208,7 @@ export default function Home() {
               <h1 className="text-3xl md:text-[48px] font-bold text-[#051145] mt-2 mb-4 md:mb-8 text-center md:text-left">
                 The Ultimate Marriage Biodata Maker
               </h1>
-              <p className="text-base md:text-[18px] text-[#54595F] mb-4 md:mb-8 text-center md:text-left">
+              <p className="text-base md:text-[18px] text-[#54595F] mb-4 md:mb-8 text-center md:text-left Montserrat-font">
                 Create beautiful biodata for marriage with just a few clicks! Easy to use,
                 fully customizable, elegantly designed marriage biodata formats
               </p>
@@ -288,7 +288,7 @@ export default function Home() {
                     <h3 className="text-[#1b7261] font-bold text-[24px]">
                       {item.title}
                     </h3>
-                    <p className="text-[#54595F] text-[16px]">{item.description}</p>
+                    <p className="text-[#54595F] text-[16px] Montserrat-font">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function Home() {
                                   scrollToBiodataForm();
                                 }}
                               >
-                                <div className="rr-btn"><span>Select Template</span></div>
+                                <div className="rr-btn"><span className="Montserrat-font">Select Template</span></div>
                               </button>
                             </div>
                           </div>
@@ -418,14 +418,14 @@ export default function Home() {
 
       {/* reviews section start */}
       <div className="bg-[#FFFFFF]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px] ">
           <div className="mb-8">
-          <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
-          <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+            <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
+            <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
           </div>
 
-          <div  className="hidden lg:flex justify-between">
-            <div>
+          <div className='relative'>
+            <div className='absolute top-0 left-0 hidden md:block'>
               <Image
                 src="/images/quate.png"
                 alt="profile"
@@ -434,7 +434,8 @@ export default function Home() {
                 className="W-[100%] h-[100%] object-cover"
               />
             </div>
-            <div>
+
+            <div className='absolute top-0 right-0 hidden md:block'>
               <Image
                 src="/images/quate-2.png"
                 alt="profile"
@@ -443,84 +444,74 @@ export default function Home() {
                 className="W-[100%] h-[100%] object-cover"
               />
             </div>
-          </div>
-
-          <div>
-            {
-              reviewSliderLoading ? (
-                <DataLoader />
-              ) : (
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={30}
-                  loop={true}
-                  pagination={{
-                    clickable: true
-                  }}
-                  modules={[Pagination]}
-                  className="reviewsSwiper"
-                  breakpoints={{
-                    310: {
-                      slidesPerView: 1
-                    },
-                    540: {
-                      slidesPerView: 1
-                    },
-                    940: {
-                      slidesPerView: 1
-                    },
-                    1024: {
-                      slidesPerView: 1
-                    },
-                    1600: {
-                      slidesPerView: 1
-                    }
-                  }}
-                >
-                  {
-                    reviews.map((item, index) => (
-                      <SwiperSlide key={index}>
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true
+              }}
+              modules={[Pagination]}
+              className="reviewsSwiper"
+              breakpoints={{
+                310: {
+                  slidesPerView: 1
+                },
+                540: {
+                  slidesPerView: 1
+                },
+                940: {
+                  slidesPerView: 1
+                },
+                1024: {
+                  slidesPerView: 1
+                },
+                1600: {
+                  slidesPerView: 1
+                }
+              }}
+            >
+              {
+                reviews.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div>
+                      <div className="w-[70%] mx-[15%] h-[240px] text-center ">
                         <div>
-                          <div className="w-[70%] mx-[15%] h-[240px]">
-                            <div>
-                              <div>
-                                <div className="flex justify-center items-center ">
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
-                                  </svg>
-                                </div>
+                          <div>
+                            <div className="flex justify-center items-center ">
+                              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                              </svg>
+                              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                              </svg>
+                              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                              </svg>
+                              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                              </svg>
+                              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0L14.6942 8.2918H23.4127L16.3593 13.4164L19.0534 21.7082L12 16.5836L4.94658 21.7082L7.64074 13.4164L0.587322 8.2918H9.30583L12 0Z" fill="#FFB016"></path>
+                              </svg>
+                            </div>
 
-                                <div className="mt-2.5 mb-4 text-center">
-                                  <p className="text-[#54595f] text-[12px] md:text-[16px]">{item.description}</p>
-                                </div>
+                            <div className="mt-2.5 mb-4 text-center">
+                              <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
+                            </div>
 
-                                <div className="text-center">
-                                  <h3 className="text-[#1b7261] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
-                                </div>
-                              </div>
+                            <div className="text-center">
+                              <h3 className="text-[#051145] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
                             </div>
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))
-                  }
-                </Swiper>
-              )
-            }
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
           </div>
-
         </div>
       </div>
       {/* reviews section end */}
