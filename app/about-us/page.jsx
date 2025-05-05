@@ -285,13 +285,13 @@ const AboutUs = () => {
 
             {/* about us problem section start */}
             <div className='bg-[#FFFFFF] sm:py-[100px]'>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-8">
                         <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What is Marriage Biodata?</h2>
                         <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Many cultures have arranged marriages. A marriage biodata is a quick and clear way to introduce yourself to potential partners and their families. A good online biodata can help you make a strong first impression and increase your chances of finding a suitable match.</h6>
                     </div>
 
-                    <div className='flex flex-col-reverse sm:flex-row justify-between'>
+                    <div className='flex flex-col-reverse sm:flex-row justify-between '>
 
                         <div className='w-full sm:w-[48%] lg:w-[50%]'>
                             {
@@ -315,7 +315,7 @@ const AboutUs = () => {
                             }
                         </div>
 
-                        <div className='w-full sm:w-[48%] lg:w-[50%]'>
+                        <div className='w-full sm:w-[48%] lg:w-[50%] mb-10 sm:mb-0'>
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
                                     <div className='w-[500px] h-[600px]'>
