@@ -252,15 +252,15 @@ const AboutUs = () => {
                             prevEl: prevRef.current,
                             nextEl: nextRef.current,
                         }}
-                        onSwiper={(swiper) => {
-                            // This is important to re-assign the navigation elements
-                            setTimeout(() => {
-                                swiper.params.navigation.prevEl = prevRef.current;
-                                swiper.params.navigation.nextEl = nextRef.current;
-                                swiper.navigation.destroy();
-                                swiper.navigation.init();
-                                swiper.navigation.update();
-                            });
+                        onInit={(swiper) => {
+                            // Override prevEl & nextEl now that refs are defined
+                            swiper.params.navigation.prevEl = prevRef.current;
+                            swiper.params.navigation.nextEl = nextRef.current;
+                            
+                            // Re-init navigation
+                            swiper.navigation.destroy();
+                            swiper.navigation.init();
+                            swiper.navigation.update();
                         }}
                         breakpoints={{
                             310: { slidesPerView: 1 },
@@ -273,7 +273,7 @@ const AboutUs = () => {
                     >
                         {service.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[370px] bg-white">
+                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[350px] bg-white">
                                     <div className="relative w-[100px] h-[100px] flex justify-center items-center mb-6 overflow-hidden rounded-full bg-[#1B726114]">
                                         {/* Normal image (visible by default) */}
                                         <Image
@@ -344,7 +344,7 @@ const AboutUs = () => {
                         <div className='w-full sm:w-[48%] xl:w-[50%] mb-10 sm:mb-0'>
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
-                                    <div className='w-[500px] h-[600px]'>
+                                    <div className='w-[500px] h-[420px] sm:h-[600px]'>
                                         <Image src="/images/aboutproblem.png" alt="banner" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
                                     </div>
                                 </div>

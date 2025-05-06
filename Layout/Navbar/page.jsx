@@ -19,10 +19,8 @@ function classNames(...classes) {
 
 const Navbar = ({ scrollToBiodataForm }) => {
 
-
     const pathname = usePathname();
     console.log(pathname)
-
 
     return (
         <>
@@ -106,7 +104,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                                     <div className="hidden md:flex space-x-6">
                                         {navigation.map((item) => (
                                             <a key={item.name} href={item.href} className={classNames(
-                                                'text-[#1b7261] font-bold text-[16px] p-[18px] hover:text-[#051145] OpenSans-font'
+                                                'text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261] OpenSans-font'
                                             )}>{item.name}</a>
                                         ))}
                                     </div>
@@ -115,14 +113,14 @@ const Navbar = ({ scrollToBiodataForm }) => {
                                 <div className="flex items-center gap-4">
                                     {pathname === '/' ? (
                                         <button className="rr-btn hidden md:block"
-                                            onClick={scrollToBiodataForm}
+                                        onClick={scrollToBiodataForm || (() => window.location.href = '/')}
                                         >
                                             <span className='OpenSans-font'>Create Biodata</span>
                                         </button>
                                     ) : (
                                         <Link href="/">
                                             <button className="rr-btn hidden md:block"
-                                                onClick={scrollToBiodataForm}
+                                                onClick={scrollToBiodataForm || (() => window.location.href = '/')}
                                             >
                                                 <span className='OpenSans-font'>Create Biodata</span>
                                             </button>
@@ -133,7 +131,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
 
                                 {/* Mobile Menu Button */}
                                 <div className="md:hidden flex items-center">
-                                    <DisclosureButton className="p-2 bg-[#1b7261] text-white rounded-md hover:bg-[#051145]">
+                                    <DisclosureButton className="p-2 bg-[#1b7261] text-[#FFFF]  rounded-md ">
                                         {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
                                     </DisclosureButton>
                                 </div>
@@ -144,7 +142,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                         <DisclosurePanel className="md:hidden">
                             <div className="space-y-1 px-2 pt-2 pb-3">
                                 {navigation.map((item) => (
-                                    <DisclosureButton key={item.name} as="a" href={item.href} className="block OpenSans-font text-[#1b7261] font-bold text-[16px] p-[18px] hover:text-[#051145]">
+                                    <DisclosureButton key={item.name} as="a" href={item.href} className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]">
                                         {item.name}
                                     </DisclosureButton>
                                 ))}

@@ -2,8 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { Tooltip } from 'react-tooltip';
-
 
 const Footer = () => {
     return (
@@ -29,9 +27,9 @@ const Footer = () => {
                     <div className='w-full md:w-[59%] lg:w-[20%]'>
                         <h2 className='text-[white] font-medium lg:text-center text-[24px]'>Information</h2>
                         <ul className='flex flex-col items-stretch lg:items-center'>
-                            <Link href={"/"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] OpenSans-font'>Home</Link>
-                            <Link href={"/about-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] OpenSans-font'>About Us</Link>
-                            <Link href={"/contact-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] OpenSans-font'>Contact Us</Link>
+                            <Link href={"/"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] transition-transform duration-200 hover:translate-x-2 OpenSans-font'>Home</Link>
+                            <Link href={"/about-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] transition-transform duration-200 hover:translate-x-2 OpenSans-font'>About Us</Link>
+                            <Link href={"/contact-us"} className='w-[50%] text-[white] font-medium py-2 px-2 hover:text-[#051145] transition-transform duration-200 hover:translate-x-2 OpenSans-font'>Contact Us</Link>
                         </ul>
                     </div>
 

@@ -22,7 +22,7 @@ const AddSectionModal = ({
 
     return (
         <div className="fixed inset-0 bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-white rounded-lg shadow-2xl max-w-md w-full">
+            <div className="bg-white rounded-lg shadow-2xl max-w-md w-full border border-[#1b7261]">
                 <form onSubmit={handleSubmit}>
                     <div className="flex justify-between items-center border-b px-6 py-4">
                         <h3 className="text-lg font-medium">
@@ -47,7 +47,7 @@ const AddSectionModal = ({
                                 <input
                                     type="text"
                                     placeholder={translations[currentLanguage]?.enterSectionName || 'Enter section name (e.g. Education Details)'}
-                                    className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                                    className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1b7261]"
                                     value={newSectionName}
                                     onChange={(e) => setNewSectionName(e.target.value)}
                                     required
@@ -62,7 +62,7 @@ const AddSectionModal = ({
                                         <input
                                             type="text"
                                             placeholder={translations[currentLanguage]?.fieldLabel || 'Field label'}
-                                            className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                                            className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1b7261]"
                                             value={field.label}
                                             onChange={(e) => updateSectionField(index, 'label', e.target.value)}
                                             required
@@ -71,7 +71,7 @@ const AddSectionModal = ({
                                 ))}
                                 <button
                                     type="button"
-                                    className="mt-2 py-1 px-3 border border-gray-300 rounded-md hover:bg-gray-100 text-sm OpenSans-font"
+                                    className="mt-2 py-2 px-3 border border-[#1b7261] text-[#051145] hover:text-[#FFF] hover:bg-[#1b7261] rounded-md text-sm OpenSans-font"
                                     onClick={addSectionField}
                                 >
                                     + {translations[currentLanguage]?.addField || 'Add Field'}
@@ -80,7 +80,7 @@ const AddSectionModal = ({
                             <div className="flex justify-end">
                                 <button
                                     type="button"
-                                    className="mr-2 py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-100 OpenSans-font"
+                                    className="mr-2 py-2 px-4 bg-[#1b7261] text-white rounded-md hover:bg-[#051145] OpenSans-font"
                                     onClick={onClose}
                                 >
                                     {translations[currentLanguage]?.cancel || 'Cancel'}
