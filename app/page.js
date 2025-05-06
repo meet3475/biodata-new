@@ -385,7 +385,7 @@ export default function Home() {
                                 className={`
                                   absolute inset-0 flex items-center justify-center
                                   transition-opacity duration-300 bg-black/40
-                                  opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+                                  opacity-100 lg:opacity-0 lg:group-hover:opacity-100
                                 `}
                                 onClick={() => {
                                   sessionStorage.setItem('selectedTemplate', item.image);
@@ -480,7 +480,7 @@ export default function Home() {
                 reviews.map((item, index) => (
                   <SwiperSlide key={index}>
                     <div>
-                      <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[240px] text-center ">
+                      <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[205px] sm:h-[260px] lg:h-[230px] text-center">
                         <div>
                           <div>
                             <div className="flex justify-center items-center ">

@@ -72,7 +72,7 @@ const ContactUs = () => {
                     <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
                         <Image src="/images/shap1.png" alt="shape1" width={150} height={150} />
                     </div>
-                    <div className="absolute top-[20%] left-[72%] animate-float-medium">
+                    <div className="absolute top-[20%] left-[72%] hidden lg:block animate-float-medium">
                         <Image src="/images/camera.png" alt="camera" width={60} height={60} />
                     </div>
                     <div className="absolute top-[8%] lg:top-[20%] left-[64%] sm:left-[34%] lg:left-[15%] animate-float-fast">
@@ -85,7 +85,7 @@ const ContactUs = () => {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className='text-center'>
-                        <h2 className='text-[#051145] text-[64px]'>Contact Us</h2>
+                        <h2 className='text-[#051145] text-[45px] sm:text-[64px]'>Contact Us</h2>
                     </div>
                     <div className='flex items-center justify-center'>
                         <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 Montserrat-font'>Home</Link>

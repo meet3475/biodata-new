@@ -166,7 +166,7 @@ const AboutUs = () => {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className='text-center'>
-                        <h2 className='text-[#051145] text-[64px]'>About Us</h2>
+                        <h2 className='text-[#051145] text-[45px] sm:text-[64px]'>About Us</h2>
                     </div>
                     <div className='flex items-center justify-center'>
                         <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 Montserrat-font'>Home</Link>
@@ -319,7 +319,7 @@ const AboutUs = () => {
 
                     <div className='flex flex-col-reverse sm:flex-row justify-between '>
 
-                        <div className='w-full sm:w-[48%] lg:w-[50%]'>
+                        <div className='w-full sm:w-[48%] xl:w-[50%]'>
                             {
                                 problem.map((item, index) => (
                                     <div key={index} data-aos="fade-up" className="mb-4 cursor-pointer" onClick={() => toggleIndex(index)}>
@@ -341,7 +341,7 @@ const AboutUs = () => {
                             }
                         </div>
 
-                        <div className='w-full sm:w-[48%] lg:w-[50%] mb-10 sm:mb-0'>
+                        <div className='w-full sm:w-[48%] xl:w-[50%] mb-10 sm:mb-0'>
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
                                     <div className='w-[500px] h-[600px]'>
@@ -421,7 +421,7 @@ const AboutUs = () => {
                                 reviews.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <div>
-                                            <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[240px] text-center">
+                                            <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[205px] sm:h-[260px] lg:h-[230px] text-center">
                                                 <div>
                                                     <div>
                                                         <div className="flex justify-center items-center ">
