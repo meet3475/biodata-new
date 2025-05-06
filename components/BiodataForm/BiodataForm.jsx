@@ -1243,7 +1243,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         name={fieldName}
                         value={formData[fieldName]}
                         onChange={handleChange}
-                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-[#1B7261]'}`}
                     />
                 );
                 break;
@@ -1254,7 +1254,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         name={fieldName}
                         value={formData[fieldName]}
                         onChange={handleChange}
-                        className="Montserrat-font w-full sm:w-[48%] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        className="Montserrat-font w-full sm:w-[48%] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1B7261]"
                     />
                 );
                 break;
@@ -1268,7 +1268,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         value={formData[fieldName]}
                         onChange={handleChange}
                         placeholder={`${translations[currentLanguage].enter} ${fieldLabels[fieldName]}`}
-                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-[#1B7261]'}`}
                     />
                 );
                 break;
@@ -1280,7 +1280,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                         value={formData[fieldName]}
                         onChange={handleChange}
                         placeholder={`${translations[currentLanguage].enter} ${fieldLabels[fieldName]}`}
-                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'}`}
+                        className={`Montserrat-font w-full sm:w-[48%] px-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${errors[fieldName] ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-[#1B7261]'}`}
                     />
                 );
         }
