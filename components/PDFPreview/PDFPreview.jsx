@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fieldOrder, sections, translations, currentLanguage }) => {
@@ -30,7 +31,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
   };
 
   return (
-    <div 
+    <div
       className="relative bg-white w-full h-full overflow-hidden"
       style={{
         aspectRatio: '1/1.414',
@@ -40,10 +41,12 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
       {/* Template background */}
       {selectedTemplate && (
         <div className="absolute inset-0 w-full h-full">
-          <img
+          <Image
             src={selectedTemplate}
+            width={500}
+            height={1000}
             alt="Template background"
-            className="w-full h-full object-cover opacity-80"
+            className="w-full h-full object-cover  opacity-80"
           />
         </div>
       )}
@@ -54,21 +57,23 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
         <div className="flex items-center mb-6">
           {profileImage && (
             <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-[#1b7261] mr-4 flex-shrink-0">
-              <img 
-                src={profileImage} 
-                alt="Profile" 
+              <Image
+                src={profileImage}
+                alt="Profile"
+                width={200}
+                height={200}
                 className="w-full h-full object-cover"
               />
             </div>
           )}
           <div>
-            <h1 
+            <h1
               className="text-xl font-bold text-[#051145]"
               style={{ fontFamily: getFontFamily() }}
             >
               {formData.name || translations[currentLanguage].name}
             </h1>
-            <p 
+            <p
               className="text-gray-600 text-sm"
               style={{ fontFamily: getFontFamily() }}
             >
@@ -81,7 +86,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
         {Object.keys(sections).map(section => (
           sections[section] && (
             <div key={section} className="mb-4">
-              <h3 
+              <h3
                 className="text-base font-bold text-[#1b7261] border-b-2 border-[#1b7261] pb-1 mb-2"
                 style={{ fontFamily: getFontFamily() }}
               >
@@ -95,13 +100,13 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
               <div className="w-full">
                 {fieldOrder[section]?.map((fieldName) => (
                   <div key={fieldName} className="flex mb-1 text-sm">
-                    <div 
+                    <div
                       className="w-2/5 font-medium pr-2"
                       style={{ fontFamily: getFontFamily() }}
                     >
-                      {translations[currentLanguage][fieldName] || fieldLabels[fieldName]} 
+                      {translations[currentLanguage][fieldName] || fieldLabels[fieldName]}
                     </div>
-                    <div 
+                    <div
                       className="w-3/5"
                       style={{ fontFamily: getFontFamily() }}
                     >
