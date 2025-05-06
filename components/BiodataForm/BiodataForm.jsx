@@ -8,6 +8,9 @@ import { pdf } from '@react-pdf/renderer';
 import { saveAs } from 'file-saver';
 import Swal from 'sweetalert2';
 import DataLoader from '../Loarder/DataLoader';
+import { FaPlus } from "react-icons/fa";
+import { VscDebugRestart } from "react-icons/vsc";
+import { FaFilePdf } from "react-icons/fa6";
 
 // Create styles for PDF document
 
@@ -1365,7 +1368,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     <button className="create-btn"
                         onClick={() => addNewField(sectionKey)}
                     >
-                        <span className='Montserrat-font'> + {translations[currentLanguage].addNewField}</span>
+                        <span className='Montserrat-font flex'> <FaPlus  className='mr-1'/>{translations[currentLanguage].addNewField}</span>
                     </button>
                 </div>
             </div>
@@ -1458,20 +1461,20 @@ const BiodataForm = ({ scrollToTemplates }) => {
                                     <button className="create-btn mb-4 sm:mb-0"
                                         onClick={addNewSection}
                                     >
-                                        <span className='Montserrat-font'>+ {translations[currentLanguage].addNewSection}</span>
+                                        <span className='Montserrat-font flex justify-center'><FaPlus className='mr-1' /> {translations[currentLanguage].addNewSection}</span>
                                     </button>
 
                                     <div className='flex flex-col sm:flex-row justify-between'>
                                         <button className="create-btn mb-4 sm:mb-0"
                                             onClick={resetForm}
                                         >
-                                            <span className='Montserrat-font'>{translations[currentLanguage].resetForm}</span>
+                                            <span className='Montserrat-font flex justify-center'><VscDebugRestart className='mr-1 text-[16px]' /> {translations[currentLanguage].resetForm}</span>
                                         </button>
 
                                         <button className="create-btn ml-0 sm:ml-8"
                                             onClick={handleDownloadPDF}
                                         >
-                                            <span className='Montserrat-font'>{translations[currentLanguage].generateBiodata}</span>
+                                            <span className='Montserrat-font flex justify-center'><FaFilePdf className='mr-1 text-[16px]'/> {translations[currentLanguage].generateBiodata}</span>
                                         </button>
                                     </div>
                                 </div>
