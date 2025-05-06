@@ -1365,7 +1365,7 @@ const BiodataForm = ({ scrollToTemplates }) => {
                     <button className="create-btn"
                         onClick={() => addNewField(sectionKey)}
                     >
-                        <span className='Montserrat-font'>{translations[currentLanguage].addNewField}</span>
+                        <span className='Montserrat-font'> + {translations[currentLanguage].addNewField}</span>
                     </button>
                 </div>
             </div>
