@@ -6,8 +6,13 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../public/fonts/Montserrat-Regular.ttf');
+  font-family: 'OpenSans';
+  src: url('../public/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Sail';
+  src: url('../public/fonts/Sail-Regular.ttf');
 }
 
 * {
@@ -38,8 +43,12 @@
   padding: 0 32px;
 }
 
-.Montserrat-font {
-  font-family: 'Montserrat', 'sans-sarif';
+.OpenSans-font {
+  font-family: 'OpenSans', 'sans-sarif';
+}
+
+.Sail-font {
+  font-family: 'Sail', 'sans-sarif';
 }
 
 /* style start */

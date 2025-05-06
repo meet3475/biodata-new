@@ -3,7 +3,6 @@ import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import Footer from '@/Layout/Footer/page'
 import Navbar from '@/Layout/Navbar/page'
 import Image from 'next/image'
-import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
@@ -14,6 +13,7 @@ import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link';
 
 const service = [
     {
@@ -169,9 +169,9 @@ const AboutUs = () => {
                         <h2 className='text-[#051145] text-[45px] sm:text-[64px]'>About Us</h2>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 Montserrat-font'>Home</Link>
-                        <IoIosArrowForward className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium Montserrat-font' />
-                        <Link href={"/about-us"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium ml-2 Montserrat-font'>About Us</Link>
+                        <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 OpenSans-font'>Home</Link>
+                        <IoIosArrowForward className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium OpenSans-font' />
+                        <Link href={"/about-us"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium ml-2 OpenSans-font'>About Us</Link>
                     </div>
                 </div>
             </div>
@@ -209,9 +209,9 @@ const AboutUs = () => {
 
                         <div className='w-full sm:w-[48%] xl:w-[45%]'>
                             <div className='flex flex-col justify-center h-[100%]'>
-                                <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5'>About Us Wedding Biodata</h5>
+                                <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>About Us Wedding Biodata</h5>
                                 <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-4'>We Will Make Your Dream Wedding Biodata</h3>
-                                <p className='text-[#54595f] text-[16px] sm:text-[18px] Montserrat-font'>
+                                <p className='text-[#54595f] text-[16px] sm:text-[18px] OpenSans-font'>
                                     Welcome to weddingbiodata.com your one-stop solution for crafting the perfect marriage biodata! Finding the right life partner is an exciting journey, and we are here to make it easier for you with our innovative marriage biodata maker.
                                 </p>
                             </div>
@@ -224,7 +224,7 @@ const AboutUs = () => {
             {/* about us Services section start */}
             <div className='bg-[#FFFFFF] sm:py-[100px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5'>Our Services</h5>
+                    <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>Our Services</h5>
 
                     <div className='flex justify-between'>
                         <div className='w-full sm:w-[60%]'>
@@ -299,7 +299,7 @@ const AboutUs = () => {
 
                                     <div>
                                         <h3 className="text-[#1b7261] font-bold text-[20px]">{item.title}</h3>
-                                        <p className="text-[#54595F] text-[14px] Montserrat-font">{item.description}</p>
+                                        <p className="text-[#54595F] text-[14px] OpenSans-font">{item.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -313,8 +313,8 @@ const AboutUs = () => {
             <div className='bg-[#FFFFFF] sm:py-[100px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-8">
-                        <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What is Marriage Biodata?</h2>
-                        <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Many cultures have arranged marriages. A marriage biodata is a quick and clear way to introduce yourself to potential partners and their families. A good online biodata can help you make a strong first impression and increase your chances of finding a suitable match.</h6>
+                        <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-5 text-center mx-0 md:mx-24 Sail-font">Many cultures have arranged marriages. A marriage biodata is a quick and clear way to introduce yourself to potential partners and their families. A good online biodata can help you make a strong first impression and increase your chances of finding a suitable match.</h6>
+                        <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">What is Marriage Biodata?</h2>
                     </div>
 
                     <div className='flex flex-col-reverse sm:flex-row justify-between '>
@@ -330,7 +330,7 @@ const AboutUs = () => {
                                             </h4>
                                             {
                                                 openIndex === index && (
-                                                    <p className="text-[#1b7261] text-[14px] sm:text-[16px] mt-2 Montserrat-font">
+                                                    <p className="text-[#1b7261] text-[14px] sm:text-[16px] mt-2 OpenSans-font">
                                                         {item.description}
                                                     </p>
                                                 )
@@ -366,8 +366,8 @@ const AboutUs = () => {
             <div className="bg-[#FFFFFF] py-[80px]" data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-8">
-                        <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
-                        <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+                        <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261]  mb-5 text-center mx-0 md:mx-24 Sail-font">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+                        <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
                     </div>
 
                     <div className='relative'>
@@ -443,7 +443,7 @@ const AboutUs = () => {
                                                         </div>
 
                                                         <div className="mt-2.5 mb-4 text-center">
-                                                            <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
+                                                            <p className="text-[#54595f] text-[12px] md:text-[18px] OpenSans-font">{item.description}</p>
                                                         </div>
 
                                                         <div className="text-center" data-aos="fade-up">

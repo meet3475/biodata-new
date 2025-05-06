@@ -208,7 +208,7 @@ export default function Home() {
               <h1 className="text-3xl md:text-[48px] font-bold text-[#051145] mt-2 mb-4 md:mb-8 text-center md:text-left">
                 The Ultimate Marriage Biodata Maker
               </h1>
-              <p className="text-base md:text-[18px] text-[#54595F] mb-4 md:mb-8 text-center md:text-left Montserrat-font">
+              <p className="text-base md:text-[18px] text-[#54595F] mb-4 md:mb-8 text-center md:text-left OpenSans-font">
                 Create beautiful biodata for marriage with just a few clicks! Easy to use,
                 fully customizable, elegantly designed marriage biodata formats
               </p>
@@ -217,7 +217,7 @@ export default function Home() {
                 <button className="rr-btn"
                   onClick={scrollToBiodataForm}
                 >
-                  <span className="Montserrat-font">
+                  <span className="OpenSans-font">
                     Create Biodata
                   </span>
                 </button>
@@ -266,7 +266,7 @@ export default function Home() {
       <div className="bg-[#FFFFFF]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
           <div className="text-left mb-3">
-            <h6 className="text-[#1b7261]">Our Services</h6>
+            <h6 className="text-[#1b7261] Sail-font">Our Services</h6>
             <h2 className="text-[28px] sm:text-[45px] text-[#051145] font-bold">
               Steps to Create Biodata
             </h2>
@@ -288,7 +288,7 @@ export default function Home() {
                     <h3 className="text-[#1b7261] font-bold text-[24px]">
                       {item.title}
                     </h3>
-                    <p className="text-[#54595F] text-[16px] Montserrat-font">{item.description}</p>
+                    <p className="text-[#54595F] text-[16px] OpenSans-font">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
             <h2 className="text-[26px] sm:text-[45px] text-[#051145] font-bold mb-5">
               Popular Marriage Biodata Designs
             </h2>
-            <h5 className="text-[#1b7261] text-[16px] sm:text-[20px] font-semibold text-center mb-[60px]">Select your favourite biodata design to get started</h5>
+            <h5 className="text-[#1b7261] text-[16px] sm:text-[20px] font-semibold text-center mb-[60px] Sail-font">Select your favourite biodata design to get started</h5>
           </div>
           <div>
             {
@@ -396,7 +396,7 @@ export default function Home() {
                                   scrollToBiodataForm();
                                 }}
                               >
-                                <div className="rr-btn"><span className="Montserrat-font">Select Template</span></div>
+                                <div className="rr-btn"><span className="OpenSans-font">Select Template</span></div>
                               </button>
                             </div>
                           </div>
@@ -425,8 +425,8 @@ export default function Home() {
       <div className="bg-[#FFFFFF]" data-aos="fade-up">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px] ">
           <div className="mb-8">
-            <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
-            <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+            <h6 className="text-[12px] sm:text-[18px] lg:text-[20px] text-[#1b7261] mb-5 text-center mx-0 md:mx-24 Sail-font">Our goal at My Biodata for Marriage is to assist you in creating the ideal marriage biodata. Hear from some of our happy customers who have successfully used our biodata maker platform to find the right person.</h6>
+            <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-0 lg:mb-[60px] text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
           </div>
 
           <div className='relative'>
@@ -502,7 +502,7 @@ export default function Home() {
                             </div>
 
                             <div className="mt-2.5 mb-4 text-center">
-                              <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
+                              <p className="text-[#54595f] text-[12px] md:text-[18px] OpenSans-font">{item.description}</p>
                             </div>
 
                             <div className="text-center" data-aos="fade-up">

@@ -41,20 +41,20 @@ const AddSectionModal = ({
                     <div className="px-6 py-4">
                         <div className="space-y-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1 Montserrat-font">
+                                <label className="block text-sm font-medium text-gray-700 mb-1 OpenSans-font">
                                     {translations[currentLanguage]?.sectionName || 'Section Name'}
                                 </label>
                                 <input
                                     type="text"
                                     placeholder={translations[currentLanguage]?.enterSectionName || 'Enter section name (e.g. Education Details)'}
-                                    className="Montserrat-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                                    className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
                                     value={newSectionName}
                                     onChange={(e) => setNewSectionName(e.target.value)}
                                     required
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2 Montserrat-font">
+                                <label className="block text-sm font-medium text-gray-700 mb-2 OpenSans-font">
                                     {translations[currentLanguage]?.sectionFields || 'Section Fields'}
                                 </label>
                                 {sectionFields.map((field, index) => (
@@ -62,7 +62,7 @@ const AddSectionModal = ({
                                         <input
                                             type="text"
                                             placeholder={translations[currentLanguage]?.fieldLabel || 'Field label'}
-                                            className="Montserrat-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
+                                            className="OpenSans-font w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200"
                                             value={field.label}
                                             onChange={(e) => updateSectionField(index, 'label', e.target.value)}
                                             required
@@ -71,7 +71,7 @@ const AddSectionModal = ({
                                 ))}
                                 <button
                                     type="button"
-                                    className="mt-2 py-1 px-3 border border-gray-300 rounded-md hover:bg-gray-100 text-sm Montserrat-font"
+                                    className="mt-2 py-1 px-3 border border-gray-300 rounded-md hover:bg-gray-100 text-sm OpenSans-font"
                                     onClick={addSectionField}
                                 >
                                     + {translations[currentLanguage]?.addField || 'Add Field'}
@@ -80,14 +80,14 @@ const AddSectionModal = ({
                             <div className="flex justify-end">
                                 <button
                                     type="button"
-                                    className="mr-2 py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-100 Montserrat-font"
+                                    className="mr-2 py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-100 OpenSans-font"
                                     onClick={onClose}
                                 >
                                     {translations[currentLanguage]?.cancel || 'Cancel'}
                                 </button>
                                 <button
                                     type="submit"
-                                    className="py-2 px-4 bg-[#051145] text-white rounded-md hover:bg-[#1b7261] Montserrat-font"
+                                    className="py-2 px-4 bg-[#051145] text-white rounded-md hover:bg-[#1b7261] OpenSans-font"
                                 >
                                     {translations[currentLanguage]?.addSection || 'Add Section'}
                                 </button>

@@ -88,9 +88,9 @@ const ContactUs = () => {
                         <h2 className='text-[#051145] text-[45px] sm:text-[64px]'>Contact Us</h2>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 Montserrat-font'>Home</Link>
-                        <IoIosArrowForward className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium Montserrat-font' />
-                        <Link href={"/contact-us"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium ml-2 Montserrat-font'>Contact Us</Link>
+                        <Link href={"/"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium mr-2 OpenSans-font'>Home</Link>
+                        <IoIosArrowForward className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium OpenSans-font' />
+                        <Link href={"/contact-us"} className='text-[#54595F] text-[18px] hover:text-[#1B7261] font-medium ml-2 OpenSans-font'>Contact Us</Link>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ const ContactUs = () => {
                     <div className='flex flex-col sm:flex-row items-center justify-between'>
                         <div className='w-full sm:w-[38%]'>
                             <h3 className="text-[20px] sm:text-[32px] lg:text-[38px] text-[#051145] font-bold mb-2">Lets get in touch with us</h3>
-                            <h6 className="text-[12px] sm:text-[16px] lg:text-[16px] text-[#54595F] Montserrat-font mb-4">You can also reach out to us by phone or email are many variations</h6>
+                            <h6 className="text-[12px] sm:text-[16px] lg:text-[16px] text-[#54595F] OpenSans-font mb-4">You can also reach out to us by phone or email are many variations</h6>
 
                             <div className="flex flex-col">
                                 <div className='flex mb-7'>
@@ -113,8 +113,8 @@ const ContactUs = () => {
                                     </div>
 
                                     <div className='flex flex-col items-center justify-center ml-5'>
-                                        <p className='Montserrat-font text-[#54595F] ml-1 text-[14px]'>Phone Number</p>
-                                        <h6 className='Montserrat-font text-[#051145] hover:text-[#1B7261] text-[16px]'>(+62)182901758</h6>
+                                        <p className='OpenSans-font text-[#54595F] ml-1 text-[14px]'>Phone Number</p>
+                                        <h6 className='OpenSans-font text-[#051145] hover:text-[#1B7261] text-[16px]'>(+62)182901758</h6>
                                     </div>
 
                                 </div>
@@ -128,8 +128,8 @@ const ContactUs = () => {
                                     </div>
 
                                     <div className='flex flex-col  justify-center ml-5'>
-                                        <p className='Montserrat-font text-[#54595F] ml-1 text-[14px]'>Email</p>
-                                        <h6 className='Montserrat-font text-[#051145] hover:text-[#1B7261] text-[16px]'>rrdevs@support.com</h6>
+                                        <p className='OpenSans-font text-[#54595F] ml-1 text-[14px]'>Email</p>
+                                        <h6 className='OpenSans-font text-[#051145] hover:text-[#1B7261] text-[16px]'>rrdevs@support.com</h6>
                                     </div>
 
                                 </div>
@@ -143,7 +143,7 @@ const ContactUs = () => {
                                     </div>
 
                                     <div className='flex flex-col items-center justify-center ml-5'>
-                                        <h6 className='Montserrat-font text-[#051145] hover:text-[#1B7261] text-[16px]'>Main Raod, Surat 39608</h6>
+                                        <h6 className='OpenSans-font text-[#051145] hover:text-[#1B7261] text-[16px]'>Main Raod, Surat 39608</h6>
                                     </div>
 
                                 </div>
@@ -152,7 +152,7 @@ const ContactUs = () => {
 
                         <div className='w-full sm:w-[58%] bg-[#F5F5F5] p-8'>
                             <h3 className='text-[#051145] font-bold text-[32px] mb-2 mt-8'>Send a message</h3>
-                            <h6 className="text-[12px] sm:text-[16px] lg:text-[16px] text-[#54595F] Montserrat-font mb-10 w-[50%]">You can also reach out to us by phone or email are many variations</h6>
+                            <h6 className="text-[12px] sm:text-[16px] lg:text-[16px] text-[#54595F] OpenSans-font mb-10 w-[50%]">You can also reach out to us by phone or email are many variations</h6>
                             <form onSubmit={handleSubmit} className="mt-6 space-y-6">
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <div className="w-full sm:w-1/2">
@@ -162,7 +162,7 @@ const ContactUs = () => {
                                             name="firstName"
                                             value={formData.firstName}
                                             onChange={handleChange}
-                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] Montserrat-font"
+                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Name'
                                             required
                                         />
@@ -174,7 +174,7 @@ const ContactUs = () => {
                                             name="lastName"
                                             value={formData.lastName}
                                             onChange={handleChange}
-                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] Montserrat-font"
+                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Email'
                                             required
                                         />
@@ -190,7 +190,7 @@ const ContactUs = () => {
                                             name="number"
                                             value={formData.number}
                                             onChange={handleChange}
-                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] Montserrat-font"
+                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Phone'
                                             required
                                         />
@@ -202,7 +202,7 @@ const ContactUs = () => {
                                             name="subject"
                                             value={formData.subject}
                                             onChange={handleChange}
-                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] Montserrat-font"
+                                            className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Subject'
                                             required
                                         />
@@ -216,7 +216,7 @@ const ContactUs = () => {
                                         rows="6"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] Montserrat-font"
+                                        className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                         placeholder='Massage'
                                         required
                                     ></textarea>
@@ -226,7 +226,7 @@ const ContactUs = () => {
                                     <button className="rr-btn"
                                         type="submit"
                                     >
-                                        <span className='Montserrat-font'>Submit</span>
+                                        <span className='OpenSans-font'>Submit</span>
                                     </button>
 
                                 </div>
