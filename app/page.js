@@ -377,7 +377,7 @@ export default function Home() {
                                 width={500}
                                 height={1000}
                                 alt="Template"
-                                className="w-full h-full object-fill"
+                                className="w-full h-full object-cover"
                               />
 
                               {/* Button centered, always visible on mobile, hover visible on desktop */}
