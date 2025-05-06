@@ -263,7 +263,7 @@ export default function Home() {
       {/* hero section end */}
 
       {/* Steps to Create Biodata section start */}
-      <div className="bg-[#FFFFFF]" data-aos="fade-up">
+      <div className="bg-[#FFFFFF]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
           <div className="text-left mb-3">
             <h6 className="text-[#1b7261]">Our Services</h6>
