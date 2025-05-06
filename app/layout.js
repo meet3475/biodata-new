@@ -6,7 +6,7 @@ export const metadata = {
   keywords: "Wedding, Biodata, Marriage, Matrimony, Profile",
   author: "Wedding Biodata Team",
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#B92753",
+  themeColor: "#1b7261",
   robots: "index, follow",
   openGraph: {
     title: "Wedding Biodata || All People Easy and Free Make Biodata.",

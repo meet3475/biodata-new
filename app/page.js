@@ -247,7 +247,7 @@ export default function Home() {
                 alt="md thumb"
                 width={220}
                 height={235}
-                className="absolute bottom-[-7%] left-[-4%] sm:left-[8%] lg:left-[-4%] hidden md:block rounded-[40%] animate-float-fast"
+                className="absolute bottom-[-7%] left-[-4%] sm:left-[8%] lg:left-[-4%] hidden md:block rounded-[120px]  animate-float-fast"
               />
               <Image
                 src="/images/img-full.png"

@@ -273,7 +273,7 @@ const AboutUs = () => {
                     >
                         {service.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[330px] bg-white">
+                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[370px] bg-white">
                                     <div className="relative w-[100px] h-[100px] flex justify-center items-center mb-6 overflow-hidden rounded-full bg-[#1B726114]">
                                         {/* Normal image (visible by default) */}
                                         <Image
@@ -299,7 +299,7 @@ const AboutUs = () => {
 
                                     <div>
                                         <h3 className="text-[#1b7261] font-bold text-[20px]">{item.title}</h3>
-                                        <p className="text-[#54595F] text-[13px] Montserrat-font">{item.description}</p>
+                                        <p className="text-[#54595F] text-[14px] Montserrat-font">{item.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -345,7 +345,7 @@ const AboutUs = () => {
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
                                     <div className='w-[500px] h-[600px]'>
-                                        <Image src="/images/banner-md.jpg" alt="banner" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
+                                        <Image src="/images/aboutproblem.png" alt="banner" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
                                     </div>
                                 </div>
                                 <Image
