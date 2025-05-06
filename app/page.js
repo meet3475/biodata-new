@@ -370,7 +370,7 @@ export default function Home() {
                     design.map((item, index) => (
                       <SwiperSlide key={index}>
                         <div className="flex justify-center">
-                          <div className="relative pb-[60px] group"> {/* Add group for hover effect */}
+                          <div className="relative pb-[60px] group">
                             <div className="w-[325px] sm:w-[380px] xl:w-[400px] h-[550px] relative overflow-hidden">
                               <Image
                                 src={item.image}
@@ -380,9 +380,13 @@ export default function Home() {
                                 className="w-full h-full object-fill"
                               />
 
-                              {/* Button centered, visible on hover */}
+                              {/* Button centered, always visible on mobile, hover visible on desktop */}
                               <button
-                                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40"
+                                className={`
+                                  absolute inset-0 flex items-center justify-center
+                                  transition-opacity duration-300 bg-black/40
+                                  opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+                                `}
                                 onClick={() => {
                                   sessionStorage.setItem('selectedTemplate', item.image);
                                   const event = new CustomEvent('templateSelected', {
@@ -396,6 +400,7 @@ export default function Home() {
                               </button>
                             </div>
                           </div>
+
 
                         </div>
                       </SwiperSlide>
@@ -417,7 +422,7 @@ export default function Home() {
       {/* create biodata section end */}
 
       {/* reviews section start */}
-      <div className="bg-[#FFFFFF]">
+      <div className="bg-[#FFFFFF]" data-aos="fade-up">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px] ">
           <div className="mb-8">
             <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
@@ -500,7 +505,7 @@ export default function Home() {
                               <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
                             </div>
 
-                            <div className="text-center">
+                            <div className="text-center" data-aos="fade-up">
                               <h3 className="text-[#051145] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
                             </div>
                           </div>

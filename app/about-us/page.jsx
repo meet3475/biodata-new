@@ -12,38 +12,40 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const service = [
     {
         image: '/images/service1.png',
         image_w: '/images/service-white1.png',
-        title: 'A Personal Snapshot',
-        description: 'Your marriage biodata format showcases a snapshot of your life, encapsulating your morals, education, career, and family values.'
+        title: 'User-Friendly Interface',
+        description: 'Our marriage biodata maker features an intuitive and user-friendly interface, ensuring that you can create a personalized biodata effortlessly.'
     },
     {
         image: '/images/service2.png',
         image_w: '/images/service-white2.png',
-        title: 'Cultural Relevance',
-        description: 'In cultures where arranged marriages are prevalent, matrimonial biodata holds immense significance.'
+        title: 'Customization Options',
+        description: 'We understand that every individual is unique. Thats why we offer a wide range of customization options, allowing you to tailor your biodata to reflect your personality and preferences accurately.'
     },
     {
         image: '/images/service3.png',
         image_w: '/images/service-white3.png',
-        title: 'Wide Range Choice',
-        description: 'Whether you choose a simple shadi biodata format or an elaborate marriage biodata design.'
+        title: 'Professional Templates',
+        description: 'Choose from a selection of professionally designed templates that strike the perfect balance between aesthetics and information presentation.'
     },
     {
         image: '/images/service4.png',
         image_w: '/images/service-white4.png',
-        title: 'Time-Saving Tool',
-        description: 'Our free online biodata maker for marriage streamlines the process of creating a marriage profile.'
+        title: 'Privacy and Security',
+        description: 'Your datas privacy and security are our top priorities. Rest assured that your information is in safe hands, and we adhere to the highest standards of data protection.'
     },
     {
         image: '/images/service2.png',
         image_w: '/images/service-white2.png',
-        title: 'Accessibility',
-        description: 'Our free biodata maker offers a variety of templates to suit your needs.'
-    }
+        title: 'Personalize Biodata',
+        description: 'Fill in the details that matter to you. Share your hobbies, interests, and aspirations to let your personality shine.'
+    },
 ]
 
 const reviews = [
@@ -114,6 +116,30 @@ const AboutUs = () => {
         setOpenIndex(prevIndex => (prevIndex === index ? null : index));
     };
 
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+            once: false // Changed to false to allow repeated animations
+        });
+
+        // Refresh AOS when route changes
+        return () => {
+            AOS.refresh();
+        };
+    }, []);
+
+    // Add scroll event listener to refresh AOS
+    useEffect(() => {
+        const handleScroll = () => {
+            AOS.refresh();
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
             {/* navbar section start */}
@@ -121,13 +147,13 @@ const AboutUs = () => {
             {/* navbar section end */}
 
             {/* First section start */}
-            <div className="relative bg-[#F6F8FF] py-[180px]" data-aos="fade-up">
+            <div className="relative bg-[#F6F8FF] py-[180px]">
                 {/* Background Shapes */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
                     <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
                         <Image src="/images/shap1.png" alt="shape1" width={150} height={150} />
                     </div>
-                    <div className="absolute top-[20%] left-[72%] animate-float-medium">
+                    <div className="absolute top-[20%] left-[72%] hidden lg:block animate-float-medium">
                         <Image src="/images/camera.png" alt="camera" width={60} height={60} />
                     </div>
                     <div className="absolute top-[8%] lg:top-[20%] left-[64%] sm:left-[34%] lg:left-[15%] animate-float-fast">
@@ -152,7 +178,7 @@ const AboutUs = () => {
             {/* First section end */}
 
             {/* about us section start */}
-            <div className='bg-[#FFFFFF] py-[90px]'>
+            <div className='bg-[#FFFFFF] py-[90px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className='flex flex-col sm:flex-row justify-center sm:justify-between'>
                         <div className='w-full sm:w-[48%] xl:w-[45%] mb-10 sm:mb-0'>
@@ -196,7 +222,7 @@ const AboutUs = () => {
             {/* about us section end */}
 
             {/* about us Services section start */}
-            <div className='bg-[#FFFFFF] sm:py-[100px]'>
+            <div className='bg-[#FFFFFF] sm:py-[100px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5'>Our Services</h5>
 
@@ -247,7 +273,7 @@ const AboutUs = () => {
                     >
                         {service.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[320px] bg-white">
+                                <div className="group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl hover:rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto h-[330px] bg-white">
                                     <div className="relative w-[100px] h-[100px] flex justify-center items-center mb-6 overflow-hidden rounded-full bg-[#1B726114]">
                                         {/* Normal image (visible by default) */}
                                         <Image
@@ -273,7 +299,7 @@ const AboutUs = () => {
 
                                     <div>
                                         <h3 className="text-[#1b7261] font-bold text-[20px]">{item.title}</h3>
-                                        <p className="text-[#54595F] text-[16px] Montserrat-font">{item.description}</p>
+                                        <p className="text-[#54595F] text-[13px] Montserrat-font">{item.description}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -284,7 +310,7 @@ const AboutUs = () => {
             {/* about us Services section end */}
 
             {/* about us problem section start */}
-            <div className='bg-[#FFFFFF] sm:py-[100px]'>
+            <div className='bg-[#FFFFFF] sm:py-[100px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-8">
                         <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What is Marriage Biodata?</h2>
@@ -337,7 +363,7 @@ const AboutUs = () => {
             {/* about us Services section end */}
 
             {/* reviews section start */}
-            <div className="bg-[#FFFFFF] py-[80px] ">
+            <div className="bg-[#FFFFFF] py-[80px]" data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-8">
                         <h2 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#051145] font-bold mb-5 text-center mx-0 md:mx-24">What Our Happy Users Say About Our Marriage Biodata Format</h2>
@@ -395,7 +421,7 @@ const AboutUs = () => {
                                 reviews.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <div>
-                                        <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[240px] text-center">
+                                            <div className="w-full sm:w-[70%] mx-0 sm:mx-[15%] h-[240px] text-center">
                                                 <div>
                                                     <div>
                                                         <div className="flex justify-center items-center ">
@@ -420,7 +446,7 @@ const AboutUs = () => {
                                                             <p className="text-[#54595f] text-[12px] md:text-[18px] Montserrat-font">{item.description}</p>
                                                         </div>
 
-                                                        <div className="text-center">
+                                                        <div className="text-center" data-aos="fade-up">
                                                             <h3 className="text-[#051145] text-[18px] md:text-[24px] font-bold">{item.name}</h3>
                                                         </div>
                                                     </div>

@@ -4,8 +4,10 @@ import Footer from '@/Layout/Footer/page'
 import Navbar from '@/Layout/Navbar/page'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +17,31 @@ const ContactUs = () => {
         subject: '',
         message: ''
     });
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+            once: false // Changed to false to allow repeated animations
+        });
+
+        // Refresh AOS when route changes
+        return () => {
+            AOS.refresh();
+        };
+    }, []);
+
+    // Add scroll event listener to refresh AOS
+    useEffect(() => {
+        const handleScroll = () => {
+            AOS.refresh();
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -39,7 +66,7 @@ const ContactUs = () => {
             {/* navbar section end */}
 
             {/* First section start */}
-            <div className="relative bg-[#F6F8FF] py-[180px]" data-aos="fade-up">
+            <div className="relative bg-[#F6F8FF] py-[180px]">
                 {/* Background Shapes */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
                     <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
@@ -70,7 +97,7 @@ const ContactUs = () => {
             {/* First section end */}
 
             {/* contact us section start */}
-            <div className='bg-[#FFFFF] py-[80px]'>
+            <div className='bg-[#FFFFF] py-[80px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className='flex flex-col sm:flex-row items-center justify-between'>
                         <div className='w-full sm:w-[38%]'>
@@ -122,7 +149,7 @@ const ContactUs = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className='w-full sm:w-[58%] bg-[#F5F5F5] p-8'>
                             <h3 className='text-[#051145] font-bold text-[32px] mb-2 mt-8'>Send a message</h3>
                             <h6 className="text-[12px] sm:text-[16px] lg:text-[16px] text-[#54595F] Montserrat-font mb-10 w-[50%]">You can also reach out to us by phone or email are many variations</h6>
