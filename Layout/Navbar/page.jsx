@@ -103,9 +103,9 @@ const Navbar = ({ scrollToBiodataForm }) => {
 
                                     <div className="hidden md:flex space-x-6">
                                         {navigation.map((item) => (
-                                            <a key={item.name} href={item.href} className={classNames(
+                                            <Link key={item.name} href={item.href} className={classNames(
                                                 'text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261] OpenSans-font'
-                                            )}>{item.name}</a>
+                                            )}>{item.name}</Link>
                                         ))}
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                         <DisclosurePanel className="md:hidden">
                             <div className="space-y-1 px-2 pt-2 pb-3">
                                 {navigation.map((item) => (
-                                    <DisclosureButton key={item.name} as="a" href={item.href} className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]">
+                                    <DisclosureButton key={item.name} as="Link" href={item.href} className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]">
                                         {item.name}
                                     </DisclosureButton>
                                 ))}
