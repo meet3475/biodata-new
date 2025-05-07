@@ -1,12 +1,16 @@
 import "./globals.css";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+
 export const metadata = {
   title: "Wedding Biodata || All People Easy and Free Make Biodata.",
   description: "Wedding Biodata Website is userfriendlly and free & easy generated Biodata.",
   keywords: "Wedding, Biodata, Marriage, Matrimony, Profile",
   author: "Wedding Biodata Team",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#1b7261",
   robots: "index, follow",
   openGraph: {
     title: "Wedding Biodata || All People Easy and Free Make Biodata.",

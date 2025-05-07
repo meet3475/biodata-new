@@ -8,11 +8,12 @@ import React, { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        fullName: '',
+        email: '',
         number: '',
         subject: '',
         message: ''
@@ -51,10 +52,30 @@ const ContactUs = () => {
         }));
     };
 
+    // const sendLoginEmail = (fullName, email) => {
+    //     emailjs.send('service_y31eb1a', 'template_ji9cn0a', {
+    //         from_name: 'Biodata',
+    //         from_email: 'meetdobariya480@gmail.com',
+    //         to_name: fullName,
+    //         to_email: email,
+    //         subject: 'Login Notification',
+    //         message: `Hi ${fullName}, you just logged in successfully at ${new Date().toLocaleString()}. If this was not you, please contact support.`,
+    //     }, 'cqVed8b1hPba0xmGl')
+    //         .then((result) => {
+    //             alert("email sent sucessfull");
+    //             console.log('Email sent:', result.text);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Email send failed:', error.text);
+    //         });
+    // }
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission here
         console.log(formData);
+        // sendLoginEmail(formData.fullName, formData.email)
         // You can add your form submission logic here
     };
 
@@ -158,9 +179,9 @@ const ContactUs = () => {
                                     <div className="w-full sm:w-1/2">
                                         <input
                                             type="text"
-                                            id="firstName"
-                                            name="firstName"
-                                            value={formData.firstName}
+                                            id="fullName"
+                                            name="fullName"
+                                            value={formData.fullName}
                                             onChange={handleChange}
                                             className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Name'
@@ -169,10 +190,10 @@ const ContactUs = () => {
                                     </div>
                                     <div className="w-full sm:w-1/2">
                                         <input
-                                            type="text"
-                                            id="lastName"
-                                            name="lastName"
-                                            value={formData.lastName}
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
                                             onChange={handleChange}
                                             className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Email'

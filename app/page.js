@@ -28,8 +28,8 @@ const step = [
   },
   {
     number: "3",
-    title: "Get Biodata on Whatsapp",
-    description: "Enter your Number and get your Biodata PDF on Whatsapp."
+    title: "Get Biodata on Download",
+    description: "Fill the All Details in Form then Genrate biodata"
   }
 ]
 
@@ -266,7 +266,7 @@ export default function Home() {
       <div className="bg-[#FFFFFF]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
           <div className="text-left mb-3">
-            <h6 className="text-[#1b7261] Sail-font">Our Services</h6>
+            <h6 className="text-[#1b7261] Sail-font">Our Steps</h6>
             <h2 className="text-[28px] sm:text-[45px] text-[#051145] font-bold">
               Steps to Create Biodata
             </h2>
