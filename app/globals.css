@@ -361,11 +361,11 @@
 }
 
 .create-btn {
-  font-size: 12px;
+  font-size: 14px;
   padding: 12px 15px;
   position: relative;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 13px;
   background-color: #1b7261;
   color: #fff;
