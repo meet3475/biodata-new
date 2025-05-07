@@ -113,7 +113,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                                 <div className="flex items-center gap-4">
                                     {pathname === '/' ? (
                                         <button className="rr-btn hidden md:block"
-                                        onClick={scrollToBiodataForm || (() => window.location.href = '/')}
+                                            onClick={scrollToBiodataForm || (() => window.location.href = '/')}
                                         >
                                             <span className='OpenSans-font'>Create Biodata</span>
                                         </button>
@@ -139,10 +139,25 @@ const Navbar = ({ scrollToBiodataForm }) => {
                         </div>
 
                         {/* Mobile Menu */}
-                        <DisclosurePanel className="md:hidden">
+                        {/* <DisclosurePanel className="md:hidden">
                             <div className="space-y-1 px-2 pt-2 pb-3">
                                 {navigation.map((item) => (
                                     <DisclosureButton key={item.name} as="a" href={item.href} className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]">
+                                        {item.name}
+                                    </DisclosureButton>
+                                ))}
+                            </div>
+                        </DisclosurePanel> */}
+
+                        <DisclosurePanel className="md:hidden">
+                            <div className="space-y-1 px-2 pt-2 pb-3">
+                                {navigation.map((item) => (
+                                    <DisclosureButton
+                                        key={item.name}
+                                        as={Link}  // Use Next.js Link component
+                                        href={item.href}
+                                        className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]"
+                                    >
                                         {item.name}
                                     </DisclosureButton>
                                 ))}
