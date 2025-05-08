@@ -20,7 +20,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className='text-[white] font-medium my-3 OpenSans-font'>
-                            Welcome to our online matrimonial biodata maker! We are a team of dedicated professionals with a passion for making the process of creating a biodata simple, easy and enjoyable.
+                            Welcome to our marriage biodata maker! We are a team of dedicated professionals with a passion for making the process of creating a marriage biodata simple, easy and enjoyable.
                         </p>
                     </div>
 
@@ -48,7 +48,7 @@ const Footer = () => {
                                     <path d="M2.7 1H16.3C17.235 1 18 1.7875 18 2.75V13.25C18 14.2125 17.235 15 16.3 15H2.7C1.765 15 1 14.2125 1 13.25V2.75C1 1.7875 1.765 1 2.7 1Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                     <path d="M18 2.75L9.5 8.875L1 2.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                 </svg>
-                                <span className='text-[14px] text-[#ffff] hover:text-[#051145] ml-1 OpenSans-font'>rrdevs@support.com</span>
+                                <span className='text-[14px] text-[#ffff] hover:text-[#051145] ml-1 OpenSans-font'>info@marriagebiodatamaker.com</span>
                             </div>
 
                             <div className='flex items-center py-2'>
@@ -68,7 +68,7 @@ const Footer = () => {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className='text-center'>
                     <p className='text-[#FFFF] OpenSans-font'>
-                        <span className='text-[#1B7261] font-bold OpenSans-font'>©weddingbiodata</span> 2025. All rights reserved.
+                        <span className='text-[#1B7261] font-bold OpenSans-font'>©marriagebiodatamaker</span> 2025. All rights reserved.
                     </p>
                     </div>
                 </div>

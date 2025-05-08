@@ -41,7 +41,7 @@ const Navbar = ({ scrollToBiodataForm }) => {
                                     <path d="M2.7 1H16.3C17.235 1 18 1.7875 18 2.75V13.25C18 14.2125 17.235 15 16.3 15H2.7C1.765 15 1 14.2125 1 13.25V2.75C1 1.7875 1.765 1 2.7 1Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                     <path d="M18 2.75L9.5 8.875L1 2.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                 </svg>
-                                <span className='text-[14px] text-[#ffff] hover:text-[#75AAA0] ml-1 OpenSans-font'>rrdevs@support.com</span>
+                                <span className='text-[14px] text-[#ffff] hover:text-[#75AAA0] ml-1 OpenSans-font'>info@marriagebiodatamaker.com</span>
                             </div>
                         </div>
 
@@ -139,16 +139,6 @@ const Navbar = ({ scrollToBiodataForm }) => {
                         </div>
 
                         {/* Mobile Menu */}
-                        {/* <DisclosurePanel className="md:hidden">
-                            <div className="space-y-1 px-2 pt-2 pb-3">
-                                {navigation.map((item) => (
-                                    <DisclosureButton key={item.name} as="a" href={item.href} className="block OpenSans-font text-[#051145] font-medium text-[16px] p-[18px] hover:text-[#1b7261]">
-                                        {item.name}
-                                    </DisclosureButton>
-                                ))}
-                            </div>
-                        </DisclosurePanel> */}
-
                         <DisclosurePanel className="md:hidden">
                             <div className="space-y-1 px-2 pt-2 pb-3">
                                 {navigation.map((item) => (

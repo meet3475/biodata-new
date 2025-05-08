@@ -14,35 +14,36 @@ import { Navigation, Pagination } from 'swiper/modules';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from 'next/link';
+import Loarder from '@/components/Loarder/Loarder';
 
 const service = [
     {
-        image: '/images/service1.png',
-        image_w: '/images/service-white1.png',
+        image: '/images/marriageuser.png',
+        image_w: '/images/marriageuser-white.png',
         title: 'User-Friendly Interface',
         description: 'Our marriage biodata maker features an intuitive and user-friendly interface, ensuring that you can create a personalized biodata effortlessly.'
     },
     {
-        image: '/images/service2.png',
-        image_w: '/images/service-white2.png',
+        image: '/images/marriageoption.png',
+        image_w: '/images/marriageoption-white.png',
         title: 'Customization Options',
         description: 'We understand that every individual is unique. Thats why we offer a wide range of customization options, allowing you to tailor your biodata to reflect your personality and preferences accurately.'
     },
     {
-        image: '/images/service3.png',
-        image_w: '/images/service-white3.png',
+        image: '/images/marriagtemplate.png',
+        image_w: '/images/marriagtemplate-white.png',
         title: 'Professional Templates',
         description: 'Choose from a selection of professionally designed templates that strike the perfect balance between aesthetics and information presentation.'
     },
     {
-        image: '/images/service4.png',
-        image_w: '/images/service-white4.png',
+        image: '/images/marragiesecurity.png',
+        image_w: '/images/marragiesecurity-white.png',
         title: 'Privacy and Security',
         description: 'Your datas privacy and security are our top priorities. Rest assured that your information is in safe hands, and we adhere to the highest standards of data protection.'
     },
     {
-        image: '/images/service2.png',
-        image_w: '/images/service-white2.png',
+        image: '/images/marriageoption.png',
+        image_w: '/images/marriageoption-white.png',
         title: 'Personalize Biodata',
         description: 'Fill in the details that matter to you. Share your hobbies, interests, and aspirations to let your personality shine.'
     },
@@ -102,6 +103,7 @@ const problem = [
 
 const AboutUs = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
@@ -140,6 +142,19 @@ const AboutUs = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        // Simulate loading time (you can remove this in production)
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading) {
+        return <Loarder />;
+    }
     return (
         <>
             {/* navbar section start */}
@@ -151,16 +166,16 @@ const AboutUs = () => {
                 {/* Background Shapes */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
                     <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
-                        <Image src="/images/shap1.png" alt="shape1" width={150} height={150} />
+                        <Image src="/images/flowerleft.png" alt="flowerleft" width={150} height={150} />
                     </div>
                     <div className="absolute top-[20%] left-[72%] hidden lg:block animate-float-medium">
                         <Image src="/images/camera.png" alt="camera" width={60} height={60} />
                     </div>
                     <div className="absolute top-[8%] lg:top-[20%] left-[64%] sm:left-[34%] lg:left-[15%] animate-float-fast">
-                        <Image src="/images/shape3.png" alt="shape3" width={40} height={40} />
+                        <Image src="/images/heroleft.png" alt="heroleft" width={40} height={40} />
                     </div>
                     <div className="absolute top-[0%] right-[0%] animate-float-xslow">
-                        <Image src="/images/shape4.png" alt="shape4" width={220} height={120} />
+                        <Image src="/images/heroright.png" alt="heroright" width={220} height={120} />
                     </div>
                 </div>
 
@@ -197,7 +212,7 @@ const AboutUs = () => {
 
                                     <Image
                                         src="/images/aboutus.png"
-                                        alt="main"
+                                        alt="aboutus"
                                         width={550}
                                         height={600}
                                         className="w-full h-full object-fill"
@@ -209,10 +224,10 @@ const AboutUs = () => {
 
                         <div className='w-full sm:w-[48%] xl:w-[45%]'>
                             <div className='flex flex-col justify-center h-[100%]'>
-                                <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>About Us Wedding Biodata</h5>
-                                <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-4'>We Will Make Your Dream Wedding Biodata</h3>
+                                <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>About Us Marriage Biodata Maker</h5>
+                                <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-4'>We Will Make Your Dream Marriage Biodata</h3>
                                 <p className='text-[#54595f] text-[16px] sm:text-[18px] OpenSans-font'>
-                                    Welcome to weddingbiodata.com your one-stop solution for crafting the perfect marriage biodata! Finding the right life partner is an exciting journey, and we are here to make it easier for you with our innovative marriage biodata maker.
+                                    Welcome to marriagebiodatamaker.com your one-stop solution for crafting the perfect marriage biodata! Finding the right life partner is an exciting journey, and we are here to make it easier for you with our innovative marriage biodata maker.
                                 </p>
                             </div>
                         </div>
@@ -224,12 +239,12 @@ const AboutUs = () => {
             {/* about us Services section start */}
             <div className='bg-[#FFFFFF] sm:py-[100px]' data-aos="fade-up">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>Our Services</h5>
+                    <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>Our Marriage Biodata Maker Services</h5>
 
                     <div className='flex justify-between'>
                         <div className='w-full sm:w-[60%]'>
                             <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-8'>
-                                We are Providing The Best Digital Make Biodata Solution
+                                We are Providing The Best Digital Make Marriage Biodata Solution
                             </h3>
                         </div>
 
@@ -256,7 +271,7 @@ const AboutUs = () => {
                             // Override prevEl & nextEl now that refs are defined
                             swiper.params.navigation.prevEl = prevRef.current;
                             swiper.params.navigation.nextEl = nextRef.current;
-                            
+
                             // Re-init navigation
                             swiper.navigation.destroy();
                             swiper.navigation.init();
@@ -280,7 +295,7 @@ const AboutUs = () => {
                                             src={item.image}
                                             width={100}
                                             height={100}
-                                            alt="service"
+                                            alt="Marriage Biodata Maker Services"
                                             className="p-4 absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0 z-10"
                                         />
 
@@ -289,7 +304,7 @@ const AboutUs = () => {
                                             src={item.image_w}
                                             width={100}
                                             height={100}
-                                            alt="service white"
+                                            alt="Marriage Biodata Maker Services white"
                                             className="p-4 absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20"
                                         />
 
@@ -345,12 +360,12 @@ const AboutUs = () => {
                             <div className="relative animate-fade-in delay-400">
                                 <div className="flex justify-center lg:justify-end">
                                     <div className='w-[500px] h-[420px] sm:h-[600px]'>
-                                        <Image src="/images/aboutproblem.png" alt="banner" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
+                                        <Image src="/images/aboutproblem.png" alt="aboutproblem" width={500} height={400} className="rounded-xl w-[100%] h-[100%] object-fill" />
                                     </div>
                                 </div>
                                 <Image
                                     src="/images/banner-sm.jpg"
-                                    alt="small thumb"
+                                    alt="small banner"
                                     width={200}
                                     height={200}
                                     className="absolute top-[10%] right-[-20%] xl:right-[-5%] xl:top-[48%] 2xl:right-[-20%] 2xl:top-[10%] hidden xl:block animate-float-fast"
@@ -373,8 +388,8 @@ const AboutUs = () => {
                     <div className='relative'>
                         <div className='absolute top-0 left-0 hidden md:block'>
                             <Image
-                                src="/images/quate.png"
-                                alt="profile"
+                                src="/images/quate-left.png"
+                                alt="quate-left"
                                 width={80}
                                 height={80}
                                 className="W-[100%] h-[100%] object-cover"
@@ -383,8 +398,8 @@ const AboutUs = () => {
 
                         <div className='absolute top-0 right-0 hidden md:block'>
                             <Image
-                                src="/images/quate-2.png"
-                                alt="profile"
+                                src="/images/quate-right.png"
+                                alt="quate-right"
                                 width={80}
                                 height={80}
                                 className="W-[100%] h-[100%] object-cover"

@@ -7,25 +7,26 @@ export const viewport = {
 
 
 export const metadata = {
-  title: "Wedding Biodata || All People Easy and Free Make Biodata.",
-  description: "Wedding Biodata Website is userfriendlly and free & easy generated Biodata.",
-  keywords: "Wedding, Biodata, Marriage, Matrimony, Profile",
-  author: "Wedding Biodata Team",
+  title: "Marriage Biodata maker || Free Easy Wedding Biodata Maker",
+  description: "Create your perfect marriage biodata for free! Use our easy and customizable wedding biodata maker to designs professionally.",
+  keywords: "marriagebiodatamake, biodata, marriage, maker, application, wedding, marriage, free",
+  author: "Marriage Biodata Team",
   robots: "index, follow",
   openGraph: {
-    title: "Wedding Biodata || All People Easy and Free Make Biodata.",
-    description: "Wedding Biodata Website is userfriendlly and free & easy generated Biodata.",
-    url: "https://biodata-new.vercel.app",
+    title: "Marriage Biodata maker || Free Easy Wedding Biodata Maker",
+    description: "Create your perfect marriage biodata for free! Use our easy and customizable wedding biodata maker to designs professionally.",
+    url: "https://marriagebiodatamaker.com",
     type: "website"
   },
-  canonical: "https://biodata-new.vercel.app",
+  canonical: "https://marriagebiodatamaker.com",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://biodata-new.vercel.app" />
+        <link rel="canonical" href="https://marriagebiodatamaker.com" />
+        <meta name="theme-color" content="#1b7261" />
       </head>
       <body>
         {children}

@@ -8,11 +8,13 @@ import React, { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import emailjs from '@emailjs/browser';
+import Loarder from '@/components/Loarder/Loarder'
+
 
 const ContactUs = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const [formData, setFormData] = useState({
-        fullName: '',
+        name: '',
         email: '',
         number: '',
         subject: '',
@@ -52,32 +54,25 @@ const ContactUs = () => {
         }));
     };
 
-    // const sendLoginEmail = (fullName, email) => {
-    //     emailjs.send('service_y31eb1a', 'template_ji9cn0a', {
-    //         from_name: 'Biodata',
-    //         from_email: 'meetdobariya480@gmail.com',
-    //         to_name: fullName,
-    //         to_email: email,
-    //         subject: 'Login Notification',
-    //         message: `Hi ${fullName}, you just logged in successfully at ${new Date().toLocaleString()}. If this was not you, please contact support.`,
-    //     }, 'cqVed8b1hPba0xmGl')
-    //         .then((result) => {
-    //             alert("email sent sucessfull");
-    //             console.log('Email sent:', result.text);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Email send failed:', error.text);
-    //         });
-    // }
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log(formData);
-        // sendLoginEmail(formData.fullName, formData.email)
-        // You can add your form submission logic here
     };
+
+
+    useEffect(() => {
+        // Simulate loading time (you can remove this in production)
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading) {
+        return <Loarder />;
+    }
 
     return (
         <>
@@ -91,16 +86,16 @@ const ContactUs = () => {
                 {/* Background Shapes */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
                     <div className="absolute top-[33%] left-[0%] hidden lg:block animate-float-slow">
-                        <Image src="/images/shap1.png" alt="shape1" width={150} height={150} />
+                        <Image src="/images/flowerleft.png" alt="flowerleft" width={150} height={150} />
                     </div>
                     <div className="absolute top-[20%] left-[72%] hidden lg:block animate-float-medium">
                         <Image src="/images/camera.png" alt="camera" width={60} height={60} />
                     </div>
                     <div className="absolute top-[8%] lg:top-[20%] left-[64%] sm:left-[34%] lg:left-[15%] animate-float-fast">
-                        <Image src="/images/shape3.png" alt="shape3" width={40} height={40} />
+                        <Image src="/images/heroleft.png" alt="heroleft" width={40} height={40} />
                     </div>
                     <div className="absolute top-[0%] right-[0%] animate-float-xslow">
-                        <Image src="/images/shape4.png" alt="shape4" width={220} height={120} />
+                        <Image src="/images/heroright.png" alt="heroright" width={220} height={120} />
                     </div>
                 </div>
 
@@ -150,7 +145,7 @@ const ContactUs = () => {
 
                                     <div className='flex flex-col  justify-center ml-5'>
                                         <p className='OpenSans-font text-[#54595F] ml-1 text-[14px]'>Email</p>
-                                        <h6 className='OpenSans-font text-[#051145] hover:text-[#1B7261] text-[16px]'>rrdevs@support.com</h6>
+                                        <h6 className='OpenSans-font text-[#051145] hover:text-[#1B7261] text-[16px]'>info@marriagebiodatamaker.com</h6>
                                     </div>
 
                                 </div>
@@ -179,9 +174,9 @@ const ContactUs = () => {
                                     <div className="w-full sm:w-1/2">
                                         <input
                                             type="text"
-                                            id="fullName"
-                                            name="fullName"
-                                            value={formData.fullName}
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
                                             onChange={handleChange}
                                             className="w-full bg-[#FFFF] px-4 py-3 border border-gray-300  focus:outline-none focus:ring focus:ring-[#1B7261] OpenSans-font"
                                             placeholder='Name'
