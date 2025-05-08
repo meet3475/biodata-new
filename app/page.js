@@ -433,8 +433,8 @@ export default function Home() {
           <div className='relative'>
             <div className='absolute top-0 left-0 hidden md:block'>
               <Image
-                src="/images/quate.png"
-                alt="profile"
+                src="/images/quate-left.png"
+                alt="quate-left"
                 width={80}
                 height={80}
                 className="W-[100%] h-[100%] object-cover"
@@ -443,8 +443,8 @@ export default function Home() {
 
             <div className='absolute top-0 right-0 hidden md:block'>
               <Image
-                src="/images/quate-2.png"
-                alt="profile"
+                src="/images/quate-right.png"
+                alt="quate-right"
                 width={80}
                 height={80}
                 className="W-[100%] h-[100%] object-cover"
