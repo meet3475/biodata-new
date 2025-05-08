@@ -56,7 +56,7 @@ const Templatesection = ({ scrollToBiodataForm }) => {
     }, []);
 
     return (
-        <div className="bg-[#F6F8FF]" data-aos="fade-up">
+        <div className="bg-[#F6F8FF]">
             <div className="py-[80px]">
                 <div className="text-center mb-3">
                     <h2 className="text-[26px] sm:text-[45px] text-[#051145] font-bold mb-5">
