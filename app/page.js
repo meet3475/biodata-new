@@ -364,7 +364,7 @@ export default function Home() {
                                 src={item.image}
                                 width={500}
                                 height={1000}
-                                alt="Marriage Biodata Maker Template"
+                                alt="marriage template"
                                 className="w-full h-full object-cover"
                               />
 

@@ -45,7 +45,7 @@ const PDFPreview = ({ formData, profileImage, selectedTemplate, fieldLabels, fie
             src={selectedTemplate}
             width={500}
             height={1000}
-            alt="Template background"
+            alt="template background"
             className="w-full h-full object-cover  opacity-80"
           />
         </div>

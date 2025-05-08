@@ -295,7 +295,7 @@ const AboutUs = () => {
                                             src={item.image}
                                             width={100}
                                             height={100}
-                                            alt="Marriage Biodata Maker Services"
+                                            alt="marriage services"
                                             className="p-4 absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0 z-10"
                                         />
 
@@ -304,7 +304,7 @@ const AboutUs = () => {
                                             src={item.image_w}
                                             width={100}
                                             height={100}
-                                            alt="Marriage Biodata Maker Services white"
+                                            alt="marriage services white"
                                             className="p-4 absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20"
                                         />
 
