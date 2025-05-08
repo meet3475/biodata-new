@@ -95,7 +95,7 @@ export default function Home() {
       {/* Steps to Create Biodata section end */}
 
       {/* templates slider section start */}
-      <div ref={templatesRef}  data-aos="fade-up">
+      <div ref={templatesRef}>
         <Templatesection scrollToBiodataForm={scrollToBiodataForm} />
         {/* templates slider section end */}
       </div>
