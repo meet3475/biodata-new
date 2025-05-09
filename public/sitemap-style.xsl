@@ -9,7 +9,7 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
 
             <head>
-                <title>kesariatextile.com/sitemap.xml</title>
+                <title>marriagebiodatamaker.com/sitemap.xml</title>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <style type="text/css">
                 * {
@@ -118,7 +118,7 @@
                 <div id="main">
                     <h1>XML Sitemaps</h1>
                     <p>
-                        <a href="https://kesariatextile.com/sitemap.xml">Index sitemaps</a>
+                        <a href="https://marriagebiodatamaker.com/sitemap.xml">Index sitemaps</a>
                     </p>
                     <xsl:if test="sitemap:sitemapindex/sitemap:sitemap">
                         <p>This XML Sitemap Index file contains
@@ -156,12 +156,12 @@
                             </div>
                         </xsl:when>
                         <xsl:otherwise>
-                            <p>No subcategory available. Redirecting to <a href="https://kesariatextile.com/sitemap.xml">Home
+                            <p>No subcategory available. Redirecting to <a href="https://marriagebiodatamaker.com/sitemap.xml">Home
                                 Page</a>...
                             </p>
                             <script>
                             setTimeout(function () {
-                                window.location.href = "https://kesariatextile.com/sitemap.xml";
+                                window.location.href = "https://marriagebiodatamaker.com/sitemap.xml";
                             }, 3000); // Redirect after 3 seconds
                             </script>
                         </xsl:otherwise>

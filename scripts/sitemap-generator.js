@@ -19,14 +19,14 @@ const generateSitemap = async () => {
     const staticPages = ["", "/about-us", "/contact-us"];
     staticPages.forEach((route) => {
         xml += `<url>
-<loc>${siteUrl}${route}</loc>
-<lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>\n`;
-    });
+            <loc>${siteUrl}${route}</loc>
+            <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+            </url>\n`;
+                });
  
-    xml += `</urlset>`;
+        xml += `</urlset>`;
  
     const sitemapPath = path.join(outputDir, "sitemap.xml");
     fs.writeFileSync(sitemapPath, xml, "utf8");
