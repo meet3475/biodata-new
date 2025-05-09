@@ -127,9 +127,7 @@ export default function Home() {
   }, []);
 
   // Add scroll event listener to refresh AOS
-
   const [designSliderLoading, setDesignSliderLoading] = useState(true);
-
 
   useEffect(() => {
     const designTimer = setTimeout(() => setDesignSliderLoading(false), 3000);
@@ -247,7 +245,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* hero section end */}
 
       {/* Steps to Create Biodata section start */}
