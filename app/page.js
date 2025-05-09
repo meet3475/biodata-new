@@ -254,7 +254,7 @@ export default function Home() {
       <div className="bg-[#FFFFFF]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
           <div className="text-left mb-3">
-            <h6 className="text-[#1b7261] text-[18px] sm:text-[20px] font-bold Sail-font">Our MarriageBiodata Maker Steps</h6>
+            <h5 className="text-[#1b7261] text-[18px] sm:text-[20px] font-bold Sail-font">Our MarriageBiodata Maker Steps</h5>
             <h2 className="text-[28px] sm:text-[45px] text-[#051145] font-bold">
               Steps to Create Marriage Biodata
             </h2>
@@ -293,7 +293,7 @@ export default function Home() {
             <h2 className="text-[26px] sm:text-[45px] text-[#051145] font-bold mb-5">
               Popular Marriage Biodata Maker Designs
             </h2>
-            <h5 className="text-[#1b7261] text-[16px] sm:text-[20px] font-semibold text-center mb-[60px] Sail-font">Select your favourite marriage biodata maker design to get started</h5>
+            <h6 className="text-[#1b7261] text-[16px] sm:text-[20px] font-semibold text-center mb-[60px] Sail-font">Select your favourite marriage biodata maker design to get started</h6>
           </div>
           <div>
             {
