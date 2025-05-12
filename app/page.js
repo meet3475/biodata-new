@@ -490,14 +490,15 @@ export default function Home() {
               540: { slidesPerView: 1 },
               766: { slidesPerView: 2 },
               940: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              1024: { slidesPerView: 2.5},
+              1120: {slidesPerView: 3 },
               1600: { slidesPerView: 3 },
             }}
           >
             {
               blogs.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="w-[380px] group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl">
+                  <div className="w-[315px] sm:w-[350px] xl:w-[380px] group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl mx-auto">
                     <div className="relative w-full h-[260px] group overflow-hidden">
                       <Image
                         src={item.image}
