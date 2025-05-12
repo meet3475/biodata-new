@@ -156,9 +156,6 @@
                             </div>
                         </xsl:when>
                         <xsl:otherwise>
-                            <p>No subcategory available. Redirecting to <a href="https://marriagebiodatamaker.com/sitemap.xml">Home
-                                Page</a>...
-                            </p>
                             <script>
                             setTimeout(function () {
                                 window.location.href = "https://marriagebiodatamaker.com/sitemap.xml";
