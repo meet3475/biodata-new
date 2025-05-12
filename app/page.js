@@ -14,6 +14,8 @@ import DataLoader from "@/components/Loarder/DataLoader";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 
 const step = [
@@ -92,10 +94,47 @@ const reviews = [
   }
 ]
 
+const blogs = [
+  {
+    image: "/images/marriage-flowers.jpg",
+    possition: "Admin",
+    comments: "2",
+    date: "22",
+    month: "sep",
+    description: "Where You Can Find Best Services For Your Marriage Biodata"
+  },
+  {
+    image: "/images/marriage-accessories.jpg",
+    possition: "Admin",
+    comments: "6",
+    date: "23",
+    month: "dec",
+    description: "You Must Need a Great Marriage Biodata"
+  },
+  {
+    image: "/images/marriage-rings.jpg",
+    possition: "Admin",
+    comments: "1",
+    date: "12",
+    month: "jan",
+    description: "Make sure your Marriage Biodata gown is the best one"
+  },
+  {
+    image: "/images/marriage-cake.jpg",
+    possition: "Admin",
+    comments: "4",
+    date: "02",
+    month: "feb",
+    description: "Where You Can Find Best Services For Your Marriage Biodata"
+  }
+]
+
 export default function Home() {
 
   const templatesRef = useRef(null);
   const biodataFormRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -389,7 +428,6 @@ export default function Home() {
 
                         </div>
                       </SwiperSlide>
-
                     ))
                   }
                 </Swiper>
@@ -405,6 +443,124 @@ export default function Home() {
         <BiodataForm scrollToTemplates={scrollToTemplates} />
       </div>
       {/* create biodata section end */}
+
+       {/* blog section start */}
+      <div className='bg-[#FFFFFF]' data-aos="fade-up">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-[80px]">
+          <h5 className='text-[#1B7261] text-[18px] sm:text-[20px] font-bold mb-2.5 Sail-font'>Our Marriage Biodata Maker Blogs</h5>
+
+          <div className='flex justify-between'>
+            <div className='w-full sm:w-[60%]'>
+              <h3 className='text-[#051145] text-[27px] lg:text-[38px] font-bold mb-8'>
+                Read Our Latest Marriage Biodata Maker News & Blogs
+              </h3>
+            </div>
+
+            <div className="hidden sm:flex justify-end gap-4 mb-6">
+              <button ref={prevRef} className="w-[50px] px-2.5 h-[50px] text-[25px] border border-[#0511451A]  text-[#051145] hover:text-[#FFFF] hover:bg-[#1B7261]">
+                <IoIosArrowBack />
+              </button>
+              <button ref={nextRef} className="w-[50px] px-2.5 h-[50px] text-[25px] border border-[#0511451A] text-[#051145] hover:text-[#FFFF] hover:bg-[#1B7261]">
+                <IoIosArrowForward />
+              </button>
+            </div>
+          </div>
+
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            modules={[Navigation]}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onInit={(swiper) => {
+              // Override prevEl & nextEl now that refs are defined
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+
+              // Re-init navigation
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              310: { slidesPerView: 1 },
+              540: { slidesPerView: 1 },
+              766: { slidesPerView: 2 },
+              940: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1600: { slidesPerView: 3 },
+            }}
+          >
+            {
+              blogs.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="w-[380px] group transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl">
+                    <div className="relative w-full h-[260px] group overflow-hidden">
+                      <Image
+                        src={item.image}
+                        width={500}
+                        height={1000}
+                        alt="blog marraige"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-0 left-1/2 right-1/2 bottom-0 h-full bg-white/30 opacity-0 transition-all duration-500 pointer-events-none group-hover:left-0 group-hover:right-0 group-hover:opacity-100"></div>
+                    </div>
+
+                    <div className="pb-8 px-8 border border-[#0511451A] h-[200px]">
+                      <div className="flex justify-between h-[70px]">
+                        <div className="flex items-center gap-0.5">
+                          <div className="w-3.5 h-3.5">
+                            <Image
+                              src="/images/user.svg"
+                              width={500}
+                              height={1000}
+                              alt="user marraige"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <p className="text-[14px] text-[#54595f] hover:text-[#1B7261] OpenSans-font">By {item.possition}</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-0.5">
+                          <div className="w-3.5 h-3.5">
+                            <Image
+                              src="/images/comments.svg"
+                              width={500}
+                              height={1000}
+                              alt="user marraige"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <p className="text-[14px] text-[#54595f] hover:text-[#1B7261] OpenSans-font">{item.comments} Comments</p>
+                          </div>
+                        </div>
+
+                        <div className="mt-[-8%] z-0">
+                          <div className="w-[50px] h-[56px] flex flex-col items-center justify-center bg-[#1B7261]">
+                            <h4 className="text-[22px] text-[#FFFF] font-bold OpenSans-font">{item.date}</h4>
+                            <p className="text-[12px] text-[#FFFF] font-medium OpenSans-font mt-[-8px]">{item.month}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="text-[24px] text-[#1B7261] hover:text-[#051145]">{item.description}</h4>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </div>
+      </div>
+      {/* blog section end */}
 
       {/* reviews section start */}
       <div className="bg-[#FFFFFF]" data-aos="fade-up">

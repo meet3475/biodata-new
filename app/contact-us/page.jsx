@@ -10,7 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Loarder from '@/components/Loarder/Loarder'
 
-
 const ContactUs = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [formData, setFormData] = useState({
@@ -54,12 +53,9 @@ const ContactUs = () => {
         }));
     };
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
     };
-
 
     useEffect(() => {
         // Simulate loading time (you can remove this in production)

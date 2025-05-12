@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FiFacebook } from "react-icons/fi";
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
@@ -45,33 +46,39 @@ const Navbar = ({ scrollToBiodataForm }) => {
                             </div>
                         </div>
 
-
-
                         <div className='flex'>
                             <div className='text-white hover:text-[#75AAA0] px-2.5 cursor-pointer transition-colors duration-300'>
-                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 1H6.09091C5.24704 1 4.43773 1.36875 3.84102 2.02513C3.24432 2.6815 2.90909 3.57174 2.90909 4.5V6.6H1V9.4H2.90909V15H5.45455V9.4H7.36364L8 6.6H5.45455V4.5C5.45455 4.31435 5.52159 4.1363 5.64093 4.00503C5.76027 3.87375 5.92213 3.8 6.09091 3.8H8V1Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <Link href="/">
+                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 1H6.09091C5.24704 1 4.43773 1.36875 3.84102 2.02513C3.24432 2.6815 2.90909 3.57174 2.90909 4.5V6.6H1V9.4H2.90909V15H5.45455V9.4H7.36364L8 6.6H5.45455V4.5C5.45455 4.31435 5.52159 4.1363 5.64093 4.00503C5.76027 3.87375 5.92213 3.8 6.09091 3.8H8V1Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </Link>
                             </div>
 
                             <div className='text-white hover:text-[#75AAA0] px-2.5 cursor-pointer transition-colors duration-300'>
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 1.00785C15.3471 1.53487 14.6242 1.93795 13.8591 2.20158C13.4485 1.66129 12.9027 1.27834 12.2957 1.10454C11.6887 0.930729 11.0497 0.974449 10.4651 1.22978C9.88045 1.48511 9.37848 1.93974 9.02703 2.53217C8.67558 3.1246 8.49161 3.82626 8.5 4.54224V5.32246C7.3018 5.35801 6.11451 5.05391 5.04387 4.43726C3.97323 3.8206 3.05249 2.91052 2.36364 1.78806C2.36364 1.78806 -0.363636 8.81003 5.77273 11.9309C4.36854 13.0216 2.69579 13.5685 1 13.4913C7.13636 17.3924 14.6364 13.4913 14.6364 4.51883C14.6357 4.3015 14.6175 4.08471 14.5818 3.87125C15.2777 3.08595 15.7687 2.09447 16 1.00785Z" className='hover:text-[#75AAA0]' stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                </svg>
+                                <Link href="/">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 1.00785C15.3471 1.53487 14.6242 1.93795 13.8591 2.20158C13.4485 1.66129 12.9027 1.27834 12.2957 1.10454C11.6887 0.930729 11.0497 0.974449 10.4651 1.22978C9.88045 1.48511 9.37848 1.93974 9.02703 2.53217C8.67558 3.1246 8.49161 3.82626 8.5 4.54224V5.32246C7.3018 5.35801 6.11451 5.05391 5.04387 4.43726C3.97323 3.8206 3.05249 2.91052 2.36364 1.78806C2.36364 1.78806 -0.363636 8.81003 5.77273 11.9309C4.36854 13.0216 2.69579 13.5685 1 13.4913C7.13636 17.3924 14.6364 13.4913 14.6364 4.51883C14.6357 4.3015 14.6175 4.08471 14.5818 3.87125C15.2777 3.08595 15.7687 2.09447 16 1.00785Z" className='hover:text-[#75AAA0]' stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                </Link>
                             </div>
                             <div className='text-white hover:text-[#75AAA0] px-2.5 cursor-pointer transition-colors duration-300'>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.8001 5.42102C11.914 5.42102 12.9823 5.88681 13.7699 6.71592C14.5576 7.54503 15.0001 8.66954 15.0001 9.84207V15H12.2001V9.84207C12.2001 9.45123 12.0526 9.07639 11.79 8.80002C11.5275 8.52365 11.1714 8.36839 10.8001 8.36839C10.4288 8.36839 10.0727 8.52365 9.81015 8.80002C9.5476 9.07639 9.4001 9.45123 9.4001 9.84207V15H6.6001V9.84207C6.6001 8.66954 7.0426 7.54503 7.83025 6.71592C8.6179 5.88681 9.68619 5.42102 10.8001 5.42102Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                    <path d="M3.8 6.1579H1V15H3.8V6.1579Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                    <path d="M2.4 3.94737C3.1732 3.94737 3.8 3.28758 3.8 2.47368C3.8 1.65979 3.1732 1 2.4 1C1.6268 1 1 1.65979 1 2.47368C1 3.28758 1.6268 3.94737 2.4 3.94737Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                </svg>
+                                <Link href="/">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8001 5.42102C11.914 5.42102 12.9823 5.88681 13.7699 6.71592C14.5576 7.54503 15.0001 8.66954 15.0001 9.84207V15H12.2001V9.84207C12.2001 9.45123 12.0526 9.07639 11.79 8.80002C11.5275 8.52365 11.1714 8.36839 10.8001 8.36839C10.4288 8.36839 10.0727 8.52365 9.81015 8.80002C9.5476 9.07639 9.4001 9.45123 9.4001 9.84207V15H6.6001V9.84207C6.6001 8.66954 7.0426 7.54503 7.83025 6.71592C8.6179 5.88681 9.68619 5.42102 10.8001 5.42102Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <path d="M3.8 6.1579H1V15H3.8V6.1579Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <path d="M2.4 3.94737C3.1732 3.94737 3.8 3.28758 3.8 2.47368C3.8 1.65979 3.1732 1 2.4 1C1.6268 1 1 1.65979 1 2.47368C1 3.28758 1.6268 3.94737 2.4 3.94737Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                </Link>
                             </div>
                             <div className='text-white hover:text-[#75AAA0] px-2.5 cursor-pointer transition-colors duration-300'>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.5 1H4.5C2.567 1 1 2.567 1 4.5V11.5C1 13.433 2.567 15 4.5 15H11.5C13.433 15 15 13.433 15 11.5V4.5C15 2.567 13.433 1 11.5 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                    <path d="M10.7997 7.55897C10.8861 8.14154 10.7866 8.73652 10.5153 9.25928C10.2441 9.78204 9.8149 10.206 9.28884 10.4707C8.76277 10.7355 8.16661 10.8277 7.58515 10.7341C7.00368 10.6406 6.46653 10.366 6.05008 9.94958C5.63364 9.53313 5.35911 8.99598 5.26554 8.41452C5.17198 7.83305 5.26414 7.23689 5.52893 6.71083C5.79371 6.18476 6.21763 5.75559 6.74039 5.48434C7.26315 5.21309 7.85813 5.11358 8.4407 5.19997C9.03494 5.28809 9.58509 5.56499 10.0099 5.98978C10.4347 6.41457 10.7116 6.96472 10.7997 7.55897Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                    <path d="M11.8501 4.14996H11.8571" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                </svg>
+                                <Link href="/">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1H4.5C2.567 1 1 2.567 1 4.5V11.5C1 13.433 2.567 15 4.5 15H11.5C13.433 15 15 13.433 15 11.5V4.5C15 2.567 13.433 1 11.5 1Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <path d="M10.7997 7.55897C10.8861 8.14154 10.7866 8.73652 10.5153 9.25928C10.2441 9.78204 9.8149 10.206 9.28884 10.4707C8.76277 10.7355 8.16661 10.8277 7.58515 10.7341C7.00368 10.6406 6.46653 10.366 6.05008 9.94958C5.63364 9.53313 5.35911 8.99598 5.26554 8.41452C5.17198 7.83305 5.26414 7.23689 5.52893 6.71083C5.79371 6.18476 6.21763 5.75559 6.74039 5.48434C7.26315 5.21309 7.85813 5.11358 8.4407 5.19997C9.03494 5.28809 9.58509 5.56499 10.0099 5.98978C10.4347 6.41457 10.7116 6.96472 10.7997 7.55897Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <path d="M11.8501 4.14996H11.8571" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
 
